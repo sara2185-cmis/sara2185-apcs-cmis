@@ -6,6 +6,6 @@ public class HelloWorldApp {
   {
     String input = JOptionPane.showInputDialog( "What's your name?");
     
-    System.out.println( "Hello,"); System.out.println( input);
+    System.out.print( "Hello,"); System.out.print( input);
   } // end main
 } // end HelloWorld
