@@ -6,17 +6,17 @@ public class InputData
  
   public static void main ( String args[] ) 
    {
-    int sum = 0;
-    int difference = 0;
-    int product = 0;
-    int quotient = 0;
-    int modulo = 0;
+    float sum = 0;
+    float difference = 0;
+    float product = 0;
+    float quotient = 0;
+    float modulo = 0;
       
     String input1 = JOptionPane.showInputDialog( "Type a number");
     String input2 = JOptionPane.showInputDialog( "Type another number or the same number.");
     
-    int num1 = Integer.parseInt( input1 );
-    int num2 = Integer.parseInt( input2 );
+    float num1 = Integer.parseInt( input1 );
+    float num2 = Integer.parseInt( input2 );
     
     sum = num1 + num2;
     difference = num1 - num2;
