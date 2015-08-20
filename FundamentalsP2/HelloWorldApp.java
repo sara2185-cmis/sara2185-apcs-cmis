@@ -12,8 +12,17 @@ public class HelloWorldApp {
     
     if( num1 > num2)
        {
-           System.out.println( num1 " is greater than " num2)
-       }              
+           System.out.println( "The value of a is" + num1 + " and it is greater than b whose value is " + num2 + ".");
+       } 
+    if(num2 > num1)
+        {
+            System.out.println( "The value of a is " + num1 + " and it is less than b whose value is " + num2 + ".");
+        }
+    if(num1 == num2)
+        {
+            System.out.println( "The value of a is " + num1 + " and it is equal to b whose value is " + num2 + ".");
+        }       
+       
     
   } // end main
 } // end HelloWorld
