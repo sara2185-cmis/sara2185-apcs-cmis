@@ -1,22 +1,33 @@
+import javax.swing.JOptionPane;
+
 public class HelloWorldApp { 
   
   public static void main ( String args[] )
   {
    
-    str[] movies = {Lord of the Rings, Belle, Into the Rough };
-    str[] songs = {Demons, The Scientist, Chandelier};
+    String[] movies = {"Lord of the Rings", "Belle", "Into the Rough"};
+    String[] songs = {"It's time", "The Scientist", "Chandelier"};
+    String movie;
+    String song;
     
-    System.out.println("My three favoriet movies are:" + nums.length ):
-    
-      
-      
-    for( int ctr = 0; ctr < 10; ctr++ )
+    for( int i = 0; i < movies.length; i++ )
     {
-        System.out.println( ctr + "\t" + ctr*ctr + "\t" + (int)(ctr + (ctr * Math.random()) ));
-    }
-   
-    
+           movie = movies[i];
         
+    } // end for loop
+    for( int i = 0; i < movies.length; i++)
+    {
+        System.out.println( movies[i]+ "\n" + "\n");
+    } // end for loop
+    int i = 0; 
+   
+   
+    while (i < songs.length - 1)
+    {
+        System.out.print( songs[i] + ", ");
+        i ++;
+    } // end while loop
+    System.out.print( songs[songs.length-1]);
     
        
     
