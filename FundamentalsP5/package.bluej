@@ -1,8 +1,8 @@
 #BlueJ package file
 objectbench.height=76
-objectbench.width=662
-package.editor.height=400
-package.editor.width=560
+objectbench.width=686
+package.editor.height=401
+package.editor.width=584
 package.editor.x=431
 package.editor.y=428
 package.numDependencies=0
@@ -12,10 +12,10 @@ package.showUses=true
 project.charset=UTF-8
 target1.editor.height=700
 target1.editor.width=900
-target1.editor.x=295
-target1.editor.y=82
+target1.editor.x=132
+target1.editor.y=31
 target1.height=50
-target1.name=FundamentalsP6
+target1.name=HelloWorldApp
 target1.naviview.expanded=true
 target1.showInterface=false
 target1.type=ClassTarget

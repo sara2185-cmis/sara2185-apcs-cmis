@@ -1,5 +1,4 @@
 
-import javax.swing.JOptionPane;
 
 public class FundamentalsP6 { 
   
@@ -9,14 +8,14 @@ public class FundamentalsP6 {
     int array[] = new int[50];
     
     
-    for( int i = 0; i < array.length; i++ )
+    for( int index = 0; index < array.length; index++ )
     {
-           array[i] = ((int) Math.random());
+           array[index] = ((int) Math.floor(Math.random() * 101));
         
     } // end for loop
-    for( int i = 0; i < array.length; i++)
+    for( int index = 0; index < array.length; index++)
     {
-        System.out.println( array[i]);
+        System.out.print( array[index] + " ");
     } // end for loop
     
     
