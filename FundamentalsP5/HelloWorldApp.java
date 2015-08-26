@@ -5,7 +5,7 @@ public class HelloWorldApp {
   public static void main ( String args[] )
   {
    
-    String[] movies = {"Lord of the Rings", "Belle", "Into the Rough"};
+    String[] movies = {"Lord of the Rings", "Belle", "From the Rough"};
     String[] songs = {"It's time", "The Scientist", "Chandelier"};
     String movie;
     String song;
