@@ -5,7 +5,7 @@ public class FundamentalsP7 {
   {
    
     int array[] = new int[10];
-    int one = Math.abs(-1);
+    int one = -1;
     
     for( int index = 0; index < array.length; index++ )
     {
@@ -17,14 +17,13 @@ public class FundamentalsP7 {
     while (index < array.length)
     {
         System.out.println( array[index]);
-    } // end for loop
+        index++;
+    } // end while loop
     
+    boolean even = index%2 == 0
     
-    for( index = 0; index < array.length; index++)
-    {
-         boolean even = index%2 == 0;
-        
-    }//end for loop
+  
+    
     for( index = 0; index < array.length; index++)
     {
          System.out.print("The number of positive intergers is:" +  even);
