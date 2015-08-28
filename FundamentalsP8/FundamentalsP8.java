@@ -12,12 +12,13 @@ public class FundamentalsP8 {
         System.out.print( artists[index] + " ");
     } // end for loop
     
-    int index = 0;
-    int index1 = ((int) (Math.random() * 2));
-    artists[index1] = "Michael Jackson";
     
-    System.out.print( artists[index1]);
-       
+    artists[(int) ( 2* Math.random())] = "Michael Jackson";
+    for( int index = 0; index < artists.length; index++)
+    {
+        System.out.print( artists[index] + " ");
+    } // end for loop
+    
     
   } // end main
 } // end HelloWorld

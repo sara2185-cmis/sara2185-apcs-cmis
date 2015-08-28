@@ -3,45 +3,37 @@ public class FundamentalsP7 {
   
   public static void main ( String args[] )
   {
-   
     int array[] = new int[10];
+    int positive = 0;
    
-    for( int index = 0; index < array.length; index++ )
+    
+    for( int index = 0; index < array.length; index++ ) //this is to randomly multiply numbers by -1
     {
-           array[index] = (((int) Math.floor(Math.random() * 100)));
         
+       int random = 0;
+       random = (int)(Math.random() * 100);
+          if (random%2 == 0)
+       {
+           array[index] = (int)(-1* (Math.random() *100));
+           positive ++;
+        }
+        else 
+       {
+          array[index] = (int)(Math.random() * 100);
+          
+       }
     } // end for loop
     
     int index = 0;
-    while (index < array.length)
+    while (index < array.length) // this is to print out the numbers in the array
     {
         System.out.println( array[index]);
         index++;
     } // end while loop
     
-    int negative = 0;
-    int positive = 0;
-    if (index%2 == 0)
-       {
-           negative = index * (int)(-1* (Math.random()* 100));
-        }
-    else 
-       {
-          positive = index * (int)(Math.random());
-       }
     
-    
-    
+    System.out.println("The number of positive intergers is:" + positive );
   
-    
-    for( index = 0; index < array.length; index++)
-    {
-         System.out.print("The number of positive intergers is:" +  positive);
-        
-    }//end for loop
-   
-    
-       
-    
+  
   } // end main
 } // end HelloWorld
