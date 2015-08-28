@@ -5,11 +5,10 @@ public class FundamentalsP7 {
   {
    
     int array[] = new int[10];
-    int one = -1;
-    
+   
     for( int index = 0; index < array.length; index++ )
     {
-           array[index] = (((int) Math.floor(Math.random() * 101)) * one);
+           array[index] = (((int) Math.floor(Math.random() * 100)));
         
     } // end for loop
     
@@ -20,13 +19,24 @@ public class FundamentalsP7 {
         index++;
     } // end while loop
     
-    boolean even = index%2 == 0
+    int negative = 0;
+    int positive = 0;
+    if (index%2 == 0)
+       {
+           negative = index * (int)(-1* (Math.random()* 100));
+        }
+    else 
+       {
+          positive = index * (int)(Math.random());
+       }
+    
+    
     
   
     
     for( index = 0; index < array.length; index++)
     {
-         System.out.print("The number of positive intergers is:" +  even);
+         System.out.print("The number of positive intergers is:" +  positive);
         
     }//end for loop
    
