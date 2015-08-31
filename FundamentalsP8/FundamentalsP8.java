@@ -18,7 +18,7 @@ public class FundamentalsP8 {
     {
         System.out.print( artists[index] + " ");
     } // end for loop
-    
+    System.out.print( "\n");
     
   } // end main
 } // end HelloWorld

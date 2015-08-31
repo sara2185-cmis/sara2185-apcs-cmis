@@ -5,7 +5,7 @@ public class FundamentalsP7 {
   {
     int array[] = new int[10];
     int positive = 0;
-   
+    int negative = 0;
     
     for( int index = 0; index < array.length; index++ ) //this is to randomly multiply numbers by -1
     {
@@ -20,7 +20,7 @@ public class FundamentalsP7 {
         else 
        {
           array[index] = (int)(Math.random() * 100);
-          
+          negative ++;
        }
     } // end for loop
     
@@ -32,7 +32,7 @@ public class FundamentalsP7 {
     } // end while loop
     
     
-    System.out.println("The number of positive intergers is:" + positive );
+    System.out.println("The number of positive intergers is:" + negative );
   
   
   } // end main
