@@ -15,12 +15,12 @@ public class FundamentalsP7 {
           if (random%2 == 0)
        {
            array[index] = (int)(-1* (Math.random() *100));
-           positive ++;
+           negative ++;
         }
         else 
        {
           array[index] = (int)(Math.random() * 100);
-          negative ++;
+          positive ++;
        }
     } // end for loop
     
@@ -32,7 +32,7 @@ public class FundamentalsP7 {
     } // end while loop
     
     
-    System.out.println("The number of positive intergers is:" + negative );
+    System.out.println("The number of positive intergers is:" + positive );
   
   
   } // end main

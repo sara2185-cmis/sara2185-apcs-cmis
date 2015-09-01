@@ -1,10 +1,10 @@
 #BlueJ package file
 objectbench.height=76
-objectbench.width=662
+objectbench.width=686
 package.editor.height=400
 package.editor.width=560
-package.editor.x=364
-package.editor.y=111
+package.editor.x=601
+package.editor.y=295
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
@@ -14,10 +14,10 @@ readme.editor.height=700
 readme.editor.width=900
 readme.editor.x=0
 readme.editor.y=22
-target1.editor.height=700
+target1.editor.height=481
 target1.editor.width=900
-target1.editor.x=362
-target1.editor.y=103
+target1.editor.x=401
+target1.editor.y=13
 target1.height=50
 target1.name=FundamentalsP8
 target1.naviview.expanded=true
