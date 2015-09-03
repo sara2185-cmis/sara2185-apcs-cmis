@@ -4,10 +4,10 @@ public class FundamentalsP4 {
   {
    
     
-    for( int ctr = 0; ctr < 10; ctr++ )
+    for( int ctr = 0; ctr <= 10; ctr++ )
     {
         System.out.println( ctr + "\t" + ctr*ctr + "\t" + (int)(ctr + (ctr * Math.random()) ));
-    }
+    } // end for
    
     
         
