@@ -6,7 +6,8 @@ public class FundamentalsP9 {
     {
         String user = JOptionPane.showInputDialog( "What is your username?");
         String pass = JOptionPane.showInputDialog( "What is your password?");
-        if(pass.equals("1234") && user.equals("Sara"))
+        int password = Integer.parseInt(pass);
+        if(( password == 1234) && user.equals("Sara"))
         {
             System.out.println (" You have successfully logged in");
      
