@@ -8,21 +8,33 @@ public class Testone {
     int length = Integer.parseInt( input );
     int array[] = new int [length];
      
-    for( float index = 0; index < array.length; index++ )
+    for( int index = 0; index < array.length; index++ )
     {
-           array[index] = ( Math.floor(Math.random() * 51));
+          array[index] = ((int)(Math.random() * 51));
         
     } // end for loop
-    for( float index = 0; index < array.length; index++)
+    for( int index = 0; index < array.length; index++)
     {
         System.out.println(index + ":" + array[index]);
     } // end for loop
    
-    for( float index = array.length-1; index > 0; index-- )
+    for( int index = array.length-1; index > 0; index-- )
     {
-           System.out.println(index + ":" + array[index]);
+        int even = array[index];
+        if( array[index] % 2 == 0)
+        {
+            
+          System.out.println(index + ":" + "E" + array[index]);
+          
+        } 
+        
+        else
+        {
+           System.out.println(index + ":" + "O" + array[index]);
+         }
         
     } // end for loop
     
+   
   } // end main
 } // end HelloWorld
