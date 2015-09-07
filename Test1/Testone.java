@@ -7,11 +7,11 @@ public class Testone {
     String input = JOptionPane.showInputDialog( "Enter a number.");
     int length = Integer.parseInt( input );
     int array[] = new int [length];
-    double nums = ((Math.random() * 51));// I was trying to use this as a variable to put in the for loop
+    int nums = ((Math.random() * 50));// I was trying to use this as a variable to put in the for loop
     
     for( int index = 0; index < array.length; index++ ) // creating random number
     {
-          array[index] = ((int)(Math.random() * 51));
+          array[index] = ((Math.random() * 50));
         
     } // end for loop
     for( int index = 0; index < array.length; index++) // printing array of random numbers
@@ -19,20 +19,28 @@ public class Testone {
         System.out.println(index + ":" + array[index]);
     } // end for loop
    
-    for( int index = array.length-1; index > 0; index-- )
+    for( int index = array.length-1; index >= 0; index-- )
     {
 
         if( array[index] % 2 == 0)// even number
         {
-         
-          System.out.println(index + ":" + "E" + array[index]);
-          
-        }// end if 
+          System.out.print(index + ":");
+          for( int E = 0; E < array[index]; E++)
+          {
+             System.out.print("E"); 
+            } // end for loop
+           System.out.println(array[index]);
+        }// end if statement
         
         else// odd number
         {
-           System.out.println(index + ":" + "O" + array[index]);
-         } // end else
+          System.out.print(index + ":");
+            for( int O = 0; O < array[index]; O++)
+          {
+             System.out.print("O"); 
+            } // end for loop
+             System.out.println(array[index]);
+         } // end else statement
         
     } // end for loop
     
