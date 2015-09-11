@@ -11,24 +11,30 @@ public class Histogram
         for( int index = 0; index < randomNums.length; index++ ) // creating random number
         {
             randomNums[index] = (int) ((Math.random() * 100));
-            for( int index1 = 0; index1 < randomNums.length; index1 ++)
+            for( int index1 = 0; index1 < 100; index1 ++)
             {  
                 if (randomNums[index] == index1)
                 {
                     counter[index1]++;
                 }//end if
+             
             } //end for loop    
         } // end for loop
-        for( int index = 0; index < randomNums.length; index++ ) // creating random number
+        for( int index = 0; index < 100; index++ ) // creating random number
         {
             System.out.println(index + " : " + counter[index]);
 
         } // end for loop
-        for( int index = 0; index < randomNums.length; index++ ) // creating random number
+        int minimumNum = 0;
+        for( int index = randomNums.length; index > 0; index-- ) // creating random number
         {
 
-            System.out.println(randomNums[index]);
-
+            if(randomNums[index-1] < randomNums[index])
+            {
+                randomNums[index] = minimumNum;
+            }// end if statement
+            System.out.println(minimumNum);
         } // end for loop
+        
     } // end main
 } // end HelloWorld
