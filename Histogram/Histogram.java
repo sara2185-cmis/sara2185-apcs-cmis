@@ -62,7 +62,7 @@ public class Histogram
         int mostOc = 0;
         for( int index = 0; index < counter.length; index++ ) // finding the random number with most occurances
         {
-            if(counter[index] >= mostOc)
+            if(counter[index] >= counter[mostOc])
             {
                 mostOc = index;
                
