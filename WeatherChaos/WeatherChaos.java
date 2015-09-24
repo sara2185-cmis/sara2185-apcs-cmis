@@ -19,76 +19,75 @@ public class WeatherChaos {
         {
             System.out.print("That's not a valid number of days");
 
-        }
+        }//end if
+        else{
 
-        for ( int i = 0; i < input; i++ )
-        {
-            temp = (int)((Math.random() *200)-100);
-            nums[i] = temp;
-            if(input > 32)
+            for ( int i = 0; i < input; i++ )
             {
-                System.out.print("That's not a valid number of days");
-            }
-            if(input <= 0)
-            {
-                System.out.print("That's not a valid number of days");
-            }
+                temp = (int)((Math.random() *200)-100);
+                nums[i] = temp;
+                if(input > 32)
+                {
+                    System.out.print("That's not a valid number of days");
+                }
+                if(input <= 0)
+                {
+                    System.out.print("That's not a valid number of days");
+                }
 
-        }// end for loop
-        System.out.println("days" + "\t" + "temp" + "\t" + "swing" + "\t" + "description");
-        for ( int i = 0; i < input; i++ )
-        {
-            temp = (int)((Math.random() *200)-100);
-            nums[i] = temp;
-            int days = i+1;
-            int swing = 1;//Math.abs(nums[i+1]-nums[i]);
-            output = "";
-            if(temp < 0)
+            }// end for loop
+            System.out.println("days" + "\t" + "temp" + "\t" + "swing" + "\t" + "description");
+            for ( int i = 0; i < input ; i++ )
             {
-                description = "freezing";
-            }
-            if(temp > 0 && temp < 15)
-            {
-                description = "chilly";
-            }
-            if(temp > 15 && temp < 30)
-            {
-                description = "comfortable";
-            }
-            if(temp > 31 && temp < 40)
-            {
-                description = "hot";
-            }
-            if(temp > 40)
-            {
-                description = "AAAAUUGGH!!!!";
-            }
-            output += description;
+                temp = (int)((Math.random() *200)-100);
+                nums[i] = temp;
+                int days = i+1;
+                int swing =  1;// (Math.abs(nums[i]-before));
+                output = "";
+                if(temp < 0)
+                {
+                    description = "freezing";
+                }//end if statement
+                if(temp > 0 && temp < 15)
+                {
+                    description = "chilly";
+                }//end if statement
+                if(temp > 15 && temp < 30)
+                {
+                    description = "comfortable";
+                }//end if statement
+                if(temp > 31 && temp < 40)
+                {
+                    description = "hot";
+                }//end if statement
+                if(temp > 40)
+                {
+                    description = "AAAAUUGGH!!!!";
+                }//end if statement
+                output += description;
 
-            System.out.println(days + "\t" + temp + "\t" + swing + "\t" + output);
+                System.out.println(days + "\t" + temp + "\t" + swing + "\t" + output);
 
-           
-            if(temp < minimumNum)
-            {
-                minimumNum = temp;
-            }// end if statement
-            if(temp > maximumNum)
-            {
-                maximumNum = temp;
-            }// end if statement
-            sum = temp + sum ;
-            average = (double)(sum) / nums.length ;
+                if(temp < minimumNum)
+                {
+                    minimumNum = temp;
+                }// end if statement
+                if(temp > maximumNum)
+                {
+                    maximumNum = temp;
+                }// end if statement
+                sum = temp + sum ;
+                average = (double)(sum) / nums.length ;
 
-               
-           
-            
+            }// end for loop
 
-           
-        }// end for loop
+    
+            System.out.println("The minimum temperature was " + minimumNum + " on day "); //+days);
+            System.out.println("The maximum temperature was " + maximumNum + " on day ");//+days );
+            System.out.println("The average temperature was  " + average);
+            System.out.println("The biggest temperature swing was  " + " between day " + " and day ");
 
-        System.out.println("The minimum temperature was " + minimumNum + " on day "  );
-        System.out.println("The maximum temperature was " + maximumNum + " on day "  );
-        System.out.println("The average temperature was  " + average);
 
+        } //end else statement
     } // end main
-} // end FundamentalsP8
+}//end WeatherChaos
