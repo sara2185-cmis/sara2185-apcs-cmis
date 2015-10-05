@@ -22,7 +22,7 @@ public class Clock
     public String toString()
     {
         String output = new String();
-        output = "The time is " + hour + ":" + min + ":" + sec;
+        output = "The time is " + String.format("%02d", hour) + ":" + String.format("%02d", min) + ":" + String.format("%02d", sec);
         return output;
     }
 
