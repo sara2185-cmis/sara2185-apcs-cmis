@@ -26,4 +26,4 @@ public class Clock
         return output;
     }
 
-} // end Song
+} // end Clock

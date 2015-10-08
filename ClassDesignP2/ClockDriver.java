@@ -12,4 +12,4 @@ public class ClockDriver
         System.out.println( bedroomClock);
         System.out.println( kitchenClock);
     }//end method main
-}// end class SongDriver
+}// end class ClockDriver
