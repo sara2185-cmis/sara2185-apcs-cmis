@@ -1,13 +1,17 @@
 
 public class CardDriver
 {
-        public static void main( String[] args )
+    public static void main( String[] args )
+    {
+        Card myHand[] = new Card[3];
+        String suit[] = {"Clubs", "Diamonds", "Hearts", "Spades"};
+        String rank[] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
+        for(int i = 0; i < 3; i++)
         {
-           
-            Song Song2 = new Song("Cold Play", "Paradise", 4);
-            Song Song1 = new Song();
-            System.out.println( Song1);
-            System.out.println( Song2);
-        }//end method main
-}// end class SongDriver
+            myHand[i] = suit[(int)(4* Math.random())] + rank[(int)(13* Math.random())];
+
+        }//end for loop
+
+    }//end method main
+}// end class CardDriver
 

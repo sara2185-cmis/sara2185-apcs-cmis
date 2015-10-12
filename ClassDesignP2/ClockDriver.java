@@ -7,7 +7,7 @@ public class ClockDriver
         int inputMin = ( Integer.parseInt(JOptionPane.showInputDialog("What minutes is it?")));
         int inputSec = ( Integer.parseInt(JOptionPane.showInputDialog("What seconds is it?")));
         
-        Clock bedroomClock = new Clock(String.format("%02d",inputHour, "%02d",inputMin, "%02d",inputSec));
+        Clock bedroomClock = new Clock(inputHour, inputMin, inputSec);
         Clock kitchenClock = new Clock();
         System.out.println( bedroomClock);
         System.out.println( kitchenClock);
