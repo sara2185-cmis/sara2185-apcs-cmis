@@ -10,5 +10,6 @@ public class StudentDriver
        
         JOptionPane.showMessageDialog( null, senior001, "CMIS Student", JOptionPane.PLAIN_MESSAGE);
         JOptionPane.showMessageDialog( null, junior001, "CMIS Student", JOptionPane.PLAIN_MESSAGE);
+        
     }//end method main
 }// end class StudentDriver

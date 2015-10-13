@@ -19,9 +19,7 @@ public class Card
     public String toString()
     {
         String output = new String();
-        output = "The first card in my hand is a " + rank + suit +
-        "The second card in my hand is a " + rank + suit +
-        "The third card in my hand is a " + rank + suit;
+        output = "One card in my hand is a " + rank + " " + suit + ".";
         return output;
     }
 

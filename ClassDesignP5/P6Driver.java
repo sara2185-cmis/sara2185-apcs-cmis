@@ -1,9 +1,24 @@
 
-public class CardDriver
+public class P6Driver
 {
     public static void main( String[] args )
     {
-        Card myHand[] = new Card[3];
+        Card player1[] = new Card[2];
+        Card player2[] = new Card[2];
+        Card player3[] = new Card[2];
+        Card player4[] = new Card[2];
+        Card player5[] = new Card[2];
+        Card dealer[] = new Card[2];
+        int value;
+        if(Card = "K" || Card = "Q" || Card = "J")
+        {
+            value = 10;
+        }//end if
+         if(Card = "A")
+        {
+            value = 11 or 1;
+        }//end if
+        
         String suit[] = {"Clubs", "Diamonds", "Hearts", "Spades"};
         String rank[] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
         for(int i = 0; i < 3; i++)
