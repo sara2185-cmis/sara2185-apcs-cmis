@@ -15,13 +15,13 @@ public class Cubiverse
         w = 1;
         h = 1;
         d = 1;
-        volume = 1;
+        volume = d * h * w;
         x = 0.50;
         y = 0.50;
         z = 0.50;
-        dleft = 0.50;
-        dbottom = 0.50;
-        dback = 0.50;
+        dleft = w *x;
+        dback = h * y;
+        dbottom = d * z;
         name = "CubiVerse-" + Math.random();
     } // end constructor Cubiverse
     public Cubiverse(int w, int h, int d, String name)
@@ -29,27 +29,27 @@ public class Cubiverse
         this.w = w;
         this.h = h;
         this.d = d;
-        this.x = x;
-        this.y = y;
-        this.z = z;
-        this.volume = volume;
-        this.dleft = dleft;
-        this.dback = dback;
-        this.dbottom = dbottom;
+        volume = w * d * h;
+        x = 0.50;
+        y = 0.50;
+        z = 0.50;
+        dleft = w *x;
+        dback = h * y;
+        dbottom = d * z;
         this.name = name;
     } // end constructor Cubiverse
      public Cubiverse(double x, double y, double z, String name)
     {
-        this.w = w;
-        this.h = h;
-        this.d = d;
+        w = 1;
+        h = 1;
+        d = 1;
         this.x = x;
         this.y = y;
         this.z = z;
-        this.volume = volume;
-        this.dleft = dleft;
-        this.dback = dback;
-        this.dbottom = dbottom;
+        volume = w * d * h;
+        dleft = w *x;
+        dback = h * y;
+        dbottom = d * z;
     } // end constructor Cubiverse
     //3. toString()
     public String toString()
@@ -58,14 +58,14 @@ public class Cubiverse
         output = "Name: " + name + "\n" +
         "w: " + w + "\n" +
         "h: " + h + "\n" +
-        "d: " + w + "\n" +
+        "d: " + d + "\n" +
         "volume: " + volume + "\n" +
-        "x: " + x + "\n" +
-        "y: " + y + "\n" +
-        "z: " + z; //+ "\n" +
-        //"distance from the left: " + dleft + "\n" +
-        //"distance from the bottom: " + dbottom + "\n" +
-        //"distance from the back: " + dback;
+        "x: " + String.format("%.2f", x) + "\n" +
+        "y: " + String.format("%.2f", y)+ "\n" +
+        "z: " + String.format("%.2f", z) + "\n" +
+        "distance from the left: " + String.format("%.2f", dleft) + "\n" +
+        "distance from the bottom: " + String.format("%.2f", dbottom) + "\n" +
+        "distance from the back: " + String.format ("%.2f", dback);
         return output;
     }
 

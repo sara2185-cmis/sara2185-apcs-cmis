@@ -35,7 +35,6 @@ public class CubiverseApp
         System.out.println("Three A Arguments\n=================");
         for ( int i = 0; i < numCubiverses; i++ )
         {
-            
             System.out.println(threeA[i]);
         }
         System.out.println("Three B Arguments\n=================");

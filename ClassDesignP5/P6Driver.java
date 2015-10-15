@@ -9,15 +9,20 @@ public class P6Driver
         Card player4[] = new Card[2];
         Card player5[] = new Card[2];
         Card dealer[] = new Card[2];
-        int value;
+        int value, values;
         if(Card = "K" || Card = "Q" || Card = "J")
         {
             value = 10;
         }//end if
          if(Card = "A")
         {
-            value = 11 or 1;
+            value = 11;
         }//end if
+        values = 
+        if(values > 21)
+        {
+            values-10;
+        }// end if
         
         String suit[] = {"Clubs", "Diamonds", "Hearts", "Spades"};
         String rank[] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
