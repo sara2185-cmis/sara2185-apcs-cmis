@@ -2,8 +2,8 @@
 public class Card
 {
     //1. Create instance variables
-    private String suit;
-    private String rank;
+    String suit;
+    String rank;
     //2. Write constructor to initialize instance variables
     public Card()
     {
