@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ClassMethodP1()
+comment1.params=
+comment1.target=int\ getYearReleased()
+comment2.params=year
+comment2.target=void\ setYearReleased(int)
+comment3.params=artist\ name\ length
+comment3.target=ClassMethodP1(java.lang.String,\ java.lang.String,\ int)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
