@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ClassMethod2()
+comment1.params=hour\ min\ sec
+comment1.target=void\ setTime(int,\ int,\ int)
+comment2.params=hours
+comment2.target=void\ convertDaylightSaving(int)
+comment3.params=hours
+comment3.target=void\ totalSeconds(int)
+comment4.params=hour\ min\ sec
+comment4.target=ClassMethod2(int,\ int,\ int)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
