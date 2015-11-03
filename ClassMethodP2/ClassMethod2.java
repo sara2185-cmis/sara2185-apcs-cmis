@@ -6,46 +6,44 @@ public class ClassMethod2
     private int min;
     private int sec;
     private int hours;
+    private int allSeconds;
     //2. Write constructor to initialize instance variables
+    
     public ClassMethod2()
     {
-        hour = 15;
-        min = 45;
-        sec = 23;
+       hour = 15;
+       min = 45;
+       sec = 23;
     } // end constructor Clock
     public void setTime(int hour, int min, int sec)
     {
         this.hour = hour;
         this.min = min;
         this.sec = sec;
-    }
+    }// ends method setTime
     public void convertDaylightSaving(int hours)
     {
-        if (hour > 0 && hour < 12)
+        if (hour < 12)
         {
-            hours+= 1;
+            this.hours = hours + 1;
         }// end if
-        else if (hour > 12 && hour < 0)
+        else if (hour > 12)
         {
-            hours-= 1;
+            this.hours = hours - 1;
         }// end if
-    }
-    public void totalSeconds(int hours)
+    }// ends method convertDaylightSaving
+    public int totalSeconds()
     {
-        hours = (hour * 3600) + (min * 60) + (sec * 60);
-    }
-    public ClassMethod2(int hour, int min, int sec)
-    {
-        this.hour = hour;
-        this.min = min;
-        this.sec = sec;
-    } // end constructor Song
+        allSeconds = (hour * 3600) + (min * 60) + (sec * 60);
+        return allSeconds;
+    }//ends method totalSeconds
+    
     //3. toString()
     public String toString()
     {
         String output = new String();
-        output = "The time is " + String.format("%02d", hour) + ":" + String.format("%02d", min) + ":" + String.format("%02d", sec) + "\n" +
-        "Total seconds = " + hours;
+        output = "The time is " + hour + ":" + min + ":" + sec + "\n" +
+        "Total seconds = " + allSeconds;
         return output;
     }
 
