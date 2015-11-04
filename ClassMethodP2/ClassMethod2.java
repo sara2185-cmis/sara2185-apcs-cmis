@@ -5,15 +5,14 @@ public class ClassMethod2
     private int hour;
     private int min;
     private int sec;
-    private int hours;
     private int allSeconds;
     //2. Write constructor to initialize instance variables
     
     public ClassMethod2()
     {
-       hour = 15;
-       min = 45;
-       sec = 23;
+       hour = 11;
+       min = 28;
+       sec = 12;
     } // end constructor Clock
     public void setTime(int hour, int min, int sec)
     {
@@ -21,29 +20,29 @@ public class ClassMethod2
         this.min = min;
         this.sec = sec;
     }// ends method setTime
-    public void convertDaylightSaving(int hours)
+    public int convertDaylightSaving(int hours)
     {
         if (hour < 12)
         {
-            this.hours = hours + 1;
+            hours = hour + 1;
         }// end if
         else if (hour > 12)
         {
-            this.hours = hours - 1;
+            hours = hour - 1;
         }// end if
+        return hours;
     }// ends method convertDaylightSaving
     public int totalSeconds()
     {
         allSeconds = (hour * 3600) + (min * 60) + (sec * 60);
         return allSeconds;
     }//ends method totalSeconds
-    
     //3. toString()
     public String toString()
     {
         String output = new String();
         output = "The time is " + hour + ":" + min + ":" + sec + "\n" +
-        "Total seconds = " + allSeconds;
+        "Total seconds = " + allSeconds + " seconds:";
         return output;
     }
 

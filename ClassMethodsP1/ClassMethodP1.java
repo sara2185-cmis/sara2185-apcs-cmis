@@ -27,12 +27,12 @@ public class ClassMethodP1
         if(( password == 1234) && user.equals("Sara"))
         {
             this.yearReleased = year;
-
         }
     }//end method getYearReleased
-    public void convertToMinSec()
+    public String convertToMinSec()
     {
-        minutes = (Integer.toString(seconds/60)) + " minutes " + (Integer.toString(seconds%60)) + " seconds.";
+        minutes = (Integer.toString(length/60)) + " minutes " + (Integer.toString(length%60)) + " seconds.";
+        return minutes;
     }//end method getYearReleased
     public ClassMethodP1(String artist, String name, int length)
     {
@@ -45,8 +45,7 @@ public class ClassMethodP1
     {
         String output = new String();
         output = "The artist of the song is: " + artist + "\n" +
-        "Name is: " + name + "\n" +
-        "Song length is: " + minutes;
+        "Name is: " + name + "\n";
         return output;
     }
     /*
