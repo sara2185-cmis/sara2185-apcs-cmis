@@ -5,11 +5,12 @@ public class ClassMethodP3App
     public static void main( String[] args )
     {
        
-        ClassMethodP3 senior001 = new ClassMethodP3();
-        ClassMethodP3 junior001 = new ClassMethodP3("Emi", "Hayakawa", 11, 1606);
-       
-        JOptionPane.showMessageDialog( null, senior001, "CMIS Student", JOptionPane.PLAIN_MESSAGE);
-        JOptionPane.showMessageDialog( null, junior001, "CMIS Student", JOptionPane.PLAIN_MESSAGE);
+        ClassMethodP3 junior = new ClassMethodP3();
+        ClassMethodP3 senior = new ClassMethodP3("Joe ", "Senior", 11, 1606, 4.0, 4.0, 3.5, 4.0, 4.0 );
+        System.out.println(senior); 
+        System.out.println("\n\n");
+        senior.setGPA(4.0, 4.0, 4.0, 4.0, 4.0);
+        System.out.println(senior);
         
     }//end method main
 }// end class StudentDriver

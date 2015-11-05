@@ -22,15 +22,9 @@ public class ClassMethod2
     }// ends method setTime
     public int convertDaylightSaving(int hours)
     {
-        if (hour < 12)
-        {
-            hours = hour + 1;
-        }// end if
-        else if (hour > 12)
-        {
-            hours = hour - 1;
-        }// end if
+        hours = hours + hour;
         return hours;
+        // h = h + delta( 1/-1)
     }// ends method convertDaylightSaving
     public int totalSeconds()
     {

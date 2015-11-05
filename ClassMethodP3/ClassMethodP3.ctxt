@@ -1,8 +1,12 @@
 #BlueJ class context
 comment0.params=
 comment0.target=ClassMethodP3()
-comment1.params=fname\ lname\ grade\ studentNumber
-comment1.target=ClassMethodP3(java.lang.String,\ java.lang.String,\ int,\ int)
+comment1.params=english\ math\ science\ fineArts\ socialScience
+comment1.target=void\ setGPA(double,\ double,\ double,\ double,\ double)
 comment2.params=
-comment2.target=java.lang.String\ toString()
-numComments=3
+comment2.target=double\ calcGPA()
+comment3.params=fname\ lname\ grade\ studentNumber\ english\ math\ science\ fineArts\ socialScience
+comment3.target=ClassMethodP3(java.lang.String,\ java.lang.String,\ int,\ int,\ double,\ double,\ double,\ double,\ double)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
