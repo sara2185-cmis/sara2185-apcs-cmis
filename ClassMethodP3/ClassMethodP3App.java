@@ -1,5 +1,4 @@
 
-import javax.swing.JOptionPane;
 public class ClassMethodP3App
 {
     public static void main( String[] args )

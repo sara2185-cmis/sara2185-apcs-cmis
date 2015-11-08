@@ -1,4 +1,4 @@
-public class ClassMethodP3
+public class ClassMethodP4
 {
     //1. Create instance variables
     private String fname;
@@ -8,7 +8,7 @@ public class ClassMethodP3
     private double grades[] = new double [5];
 
     //2. Write constructor to initialize instance variables
-    public ClassMethodP3()
+    public ClassMethodP4()
     {
         lname = "Tantiviramanond";
         fname = "Anchalee";
@@ -38,7 +38,30 @@ public class ClassMethodP3
         total /= grades.length;
         return total;
     }// end method calcGPA
-    public ClassMethodP3(String fname, String lname, int grade, int studentNumber, double english, double math, double science, double fineArts, double socialScience)
+    public String getGPA()
+    {
+        if (calcGPA() > 4.00)
+        {
+            return "A";
+        }// end if
+        else if (calcGPA() > 3.00 && calcGPA() <= 4.00)
+        {
+            return "B";
+        }// end else if
+        else if (calcGPA() > 2.00 && calcGPA() <= 3.00)
+        {
+            return "C";
+        }// end else if
+        else if (calcGPA() > 1.00 && calcGPA() <= 2.00)
+        {
+            return "D";
+        }// end else if
+        else 
+        {
+            return "F";
+        }// end else
+    }//end get GPA
+    public ClassMethodP4(String fname, String lname, int grade, int studentNumber, double english, double math, double science, double fineArts, double socialScience)
     {
         this.lname = lname;
         this.fname = fname;
@@ -54,10 +77,11 @@ public class ClassMethodP3
     public String toString()
     {
         String output = new String();
-        output = "The student's name is " + fname + lname + ". \n" +
-        "His/her grade is " + grade + ". \n" +
-        " His/her student number is " + studentNumber + ". \n" +
-        "His/her average gpa is " + calcGPA();
+        output = "The student's name is " + fname + lname + "\n" +
+        "Grade level: " + grade + "\n" +
+        " Student number: " + studentNumber + "\n" +
+        "Average gpa: " + calcGPA() + "\n" +
+         "Grade: " + getGPA();
         return output;
     }
 }

@@ -28,7 +28,7 @@ public class ClassMethod2
     }// ends method convertDaylightSaving
     public int totalSeconds()
     {
-        allSeconds = (hour * 3600) + (min * 60) + (sec * 60);
+        allSeconds = (hour * 3600) + (min * 60) + sec;
         return allSeconds;
     }//ends method totalSeconds
     //3. toString()
