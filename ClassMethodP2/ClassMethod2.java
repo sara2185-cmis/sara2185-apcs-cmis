@@ -6,6 +6,7 @@ public class ClassMethod2
     private int min;
     private int sec;
     private int allSeconds;
+    private int hours;
     //2. Write constructor to initialize instance variables
     
     public ClassMethod2()
@@ -20,10 +21,9 @@ public class ClassMethod2
         this.min = min;
         this.sec = sec;
     }// ends method setTime
-    public int convertDaylightSaving(int hours)
+    public void convertDaylightSaving(int hour)
     {
-        hours = hours + hour;
-        return hours;
+        this.hour = this.hour + hour;
         // h = h + delta( 1/-1)
     }// ends method convertDaylightSaving
     public int totalSeconds()

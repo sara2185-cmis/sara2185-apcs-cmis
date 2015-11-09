@@ -12,7 +12,7 @@ public class ClassMethodDriver
         Clock.totalSeconds();
         System.out.println( Clock);
         System.out.println("\n\n");
-        System.out.println("Because of Daylight Savings, the hour is now: " +  Clock.convertDaylightSaving(1));
+        Clock.convertDaylightSaving(1);
         System.out.println( Clock);
     }//end method main
 }// end class ClockDriver
