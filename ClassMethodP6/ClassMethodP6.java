@@ -3,22 +3,47 @@ public class ClassMethodP6
 {
     public static void main(String [] args)
     {
+        String password = JOptionPane.showInputDialog( "What is your password?");
+        String compare = "";
 
-        String InputPassword = JOptionPane.showInputDialog( "What is your password?");
-        String password = new String("abc*D_");
-        String passLetter = new String(InputPassword.substring(3,4));
-        System.out.println(passLetter);
-        String oneLetter = new String(password.substring(3,4));
-        System.out.println(oneLetter);
-
-        if( oneLetter.compareTo(passLetter) == 0)
+        for (int i = 0; i < password.length(); i++)
         {
-            System.out.print("You have successfully logged in!");
-        }
-        else 
-        {
-            System.out.print("Wrong Password");
-        }
+            String oneLetter = new String(password.substring(i, i+1));
+            if(oneLetter.equals("*"))
+            {
+                compare = "yes";
+            }
+            else if(oneLetter.equals("-"))
+            {
+                compare = "yes";
+            }
 
-    }// end method main
-}// end class
+            else if(oneLetter.equals("@"))
+            {
+                compare = "yes";
+            }
+            else if(oneLetter.equals("/"))
+            {
+                compare = "yes";
+            }
+            else if(oneLetter.equals("+"))
+            {
+                compare = "yes";
+            }
+            else 
+            {
+                compare = "no";
+            }
+
+        }
+        if(password.length() > 6 && compare.equals("yes"))
+        {
+            System.out.print("You have successfully logged in");
+        }
+        else{
+
+            System.out.print("Wrong password");
+        }
+    }
+}
+
