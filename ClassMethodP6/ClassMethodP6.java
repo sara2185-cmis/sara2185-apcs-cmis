@@ -4,39 +4,35 @@ public class ClassMethodP6
     public static void main(String [] args)
     {
         String password = JOptionPane.showInputDialog( "What is your password?");
-        String compare = "";
+        int compare = 0;
 
         for (int i = 0; i < password.length(); i++)
         {
             String oneLetter = new String(password.substring(i, i+1));
             if(oneLetter.equals("*"))
             {
-                compare = "yes";
+                compare = 1;
             }
             else if(oneLetter.equals("-"))
             {
-                compare = "yes";
+                compare = 1;
             }
 
             else if(oneLetter.equals("@"))
             {
-                compare = "yes";
+                compare = 1;
             }
             else if(oneLetter.equals("/"))
             {
-                compare = "yes";
+                compare = 1;
             }
             else if(oneLetter.equals("+"))
             {
-                compare = "yes";
+                compare = 1;
             }
-            else 
-            {
-                compare = "no";
-            }
-
+            
         }
-        if(password.length() > 6 && compare.equals("yes"))
+        if(password.length() > 6 && compare == 1)
         {
             System.out.print("You have successfully logged in");
         }
