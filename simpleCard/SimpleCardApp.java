@@ -10,23 +10,16 @@ public class SimpleCardApp
         for(int i = 0; i < 13; i++)
         {
             Deck[i] = new SimpleCard(suit[0], rank[i]);
+            Deck[i+ rank.length] = new SimpleCard(suit[1], rank[i]);
+            Deck[i+ (2* rank.length)] = new SimpleCard(suit[2], rank[i]);
+            Deck[i + (3*rank.length)] = new SimpleCard(suit[3], rank[i]);
         }//end for loop
-        for(int i = 0; i < 13; i++)
+       
+        for ( int i = 0; i < 5; i++ )
         {
-            Deck[i] = new SimpleCard(suit[1], rank[i]);
-
-        }//end for loop
-        for(int i = 0; i < 13; i++)
-        {
-            Deck[i] = new SimpleCard(suit[2], rank[i]);
-        }//end for loop
-        for(int i = 0; i < 13; i++)
-        {
-            Deck[i] = new SimpleCard(suit[3], rank[i]);
-        }//end for loop
-        
             System.out.println(Deck[(int)(Math.random() * 52)]);
-        
-    }//end method main
-}// end class CardDriver
+        }//end for loop
+
+        }//end method main 
+    }// end class CardDriver
 
