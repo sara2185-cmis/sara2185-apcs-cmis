@@ -1,33 +1,16 @@
-
-/**
- * Write a description of class Euler4 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Euler4
+public class EulerP3//I'm just printing all the factors
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Euler4
-     */
-    public Euler4()
+    public static void main( String[] args )
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
-}
+        int num = 777;
+        for (int i = 2; i < num; i++)
+        {
+            if(num%i == 0)// is a factor
+            {
+                System.out.println(i);
+               
+            }//end if
+        }//end for
+        
+    }//end method main 
+}// end class CardDriver
