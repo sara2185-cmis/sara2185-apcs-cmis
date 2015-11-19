@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Running()
+comment1.params=miles
+comment1.target=double\ kilometers(double)
+comment2.params=
+comment2.target=java.lang.String\ encouragement()
+comment3.params=miles
+comment3.target=void\ setRunning(double)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

@@ -2,7 +2,11 @@
 comment0.params=
 comment0.target=ShoesUpdated()
 comment1.params=style\ brand\ size
-comment1.target=ShoesUpdated(java.lang.String,\ java.lang.String,\ int)
+comment1.target=void\ setShoesUpdated(java.lang.String,\ java.lang.String,\ int)
 comment2.params=
-comment2.target=java.lang.String\ toString()
-numComments=3
+comment2.target=java.lang.String\ getShoesUpdated()
+comment3.params=style\ brand\ size
+comment3.target=ShoesUpdated(java.lang.String,\ java.lang.String,\ int)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

@@ -20,31 +20,37 @@ public class ShoesUpdated
     }
     public String getShoesUpdated()
     {
+        String result = "";
         if(style.equals("Wedges"))
         {
-            return "Cool";
+           result= "Cool";
         }
         else if(style.equals("Stilletos"))
         {
-            return "Ow";
+            result = "Ow";
         }
          else if(brand.equals("Nike"))
         {
-            return "So expensive";
+            result = "So expensive";
         }
         else if(brand.equals("Billabong"))
 
         {
-            return "Nice~";
+            result = "Nice~";
         }
-         else if(size > 12)
+        else if(size > 12)
         {
-            return "Huge Feet!";
+            result = "Huge Feet!";
         }
         else if(size < 5)
         {
-            return "Are you a chid?";
+            result = "Are you a chid?";
         }
+        else
+        {
+            result = "Hmmmm";
+        }
+        return result;
         
     }
     public ShoesUpdated(String style, String brand, int size)
