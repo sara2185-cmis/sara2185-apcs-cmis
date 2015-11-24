@@ -2,7 +2,7 @@ public class Hand
 {
     private int nCards;
     private int totalPoints = 0;
-    //private Card cardsInHand;
+    private Card cardsInHand;
     private String name;
 
     public Hand()
@@ -10,7 +10,7 @@ public class Hand
         nCards = 2;
         for(int i = 0; i < nCards; i++)
         {
-            //cardsInHand = new Card(suit[(int)(Math.random() *4)], rank[(int)(Math.random() *13)]);
+            cardsInHand = new Card(suit[(int)(Math.random() *4)], rank[(int)(Math.random() *13)]);
         }
     }
 
@@ -19,7 +19,7 @@ public class Hand
         nCards = 2;
         for(int i = 0; i < nCards; i++)
         {
-           // cardsInHand = new Card(suit[(int)(Math.random() *4)], rank[(int)(Math.random() *13)]);
+           cardsInHand = new Card(suit[(int)(Math.random() *4)], rank[(int)(Math.random() *13)]);
         }
         this.name = name;
     }
