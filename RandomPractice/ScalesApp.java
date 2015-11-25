@@ -13,10 +13,11 @@ public class ScalesApp
        String flatsSharps[] = {"\u266D", "#", " "};
        String tonality[] = {"major", "harmonic minor", "melodic minor"};
        String articulation[] = {"staccato", "legato"};
+       String type[] = {"Scales a third apart", "Scales a sixth apart", "Scales " };
        
        for(int i = 0; i < inputLength; i++)
        {
-            thisScales[i] = new Scales(key[(int)(Math.random() *7)], flatsSharps[(int)(Math.random() *3)], tonality[(int)(Math.random() * 3)], articulation[(int)(Math.random() * 2)]);
+            thisScales[i] = new Scales(type[(int)(Math.random() *type.length)], key[(int)(Math.random() *key.length)], flatsSharps[(int)(Math.random() *flatsSharps.length)], tonality[(int)(Math.random() * tonality.length)], articulation[(int)(Math.random() * articulation.length)]);
             System.out.println(thisScales[i]);
         }
        

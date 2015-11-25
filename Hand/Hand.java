@@ -4,6 +4,8 @@ public class Hand
     private int totalPoints = 0;
     private Card cardsInHand;
     private String name;
+    private int playerPoints = player.getPoints();
+    private int dealerPoints = dealer.getPoints(); 
 
     public Hand()
     {
@@ -19,7 +21,7 @@ public class Hand
         nCards = 2;
         for(int i = 0; i < nCards; i++)
         {
-           cardsInHand = new Card(suit[(int)(Math.random() *4)], rank[(int)(Math.random() *13)]);
+            cardsInHand = new Card(suit[(int)(Math.random() *4)], rank[(int)(Math.random() *13)]);
         }
         this.name = name;
     }
@@ -28,7 +30,6 @@ public class Hand
     {
         for(int i = 0; i < nCards; i++)
         {
-
             if(cardsInHand.rank == "K" || cardsInHand.rank == "Q" || cardsInHand.rank == "J"|| cardsInHand.rank == "10")
             {
                 value = 10;
@@ -80,8 +81,6 @@ public class Hand
 
     public int compare(Hand dealer)
     {
-        int playerPoints = player.getPoints();
-        int dealerPoints = dealer.getPoints(); 
         if (playerPoints == 21)
         {
             System.out.println("Player got blackjack and wins!");
@@ -94,7 +93,6 @@ public class Hand
         {
             System.out.println("Player loses to dealer!");
         }//end else
-
     }
 
     public Hand draw()
@@ -103,6 +101,5 @@ public class Hand
         CardsInHand += newCard;
         nCards+=1;
         int newTotalPoints = playerPoints + newCard.getPoints();
-
     }
 }
