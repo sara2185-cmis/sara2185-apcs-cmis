@@ -11,31 +11,30 @@ public class Running
         miles = 5;
 
     } // end constructor Student
-    public double kilometers(double miles)
+     public void setRunning(double miles)
     {
-        this.kilometers = this.miles*1.60934;
-        return kilometers;
+        this.miles = miles;
+    }
+    public void kilometers(double miles)
+    {
+        kilometers = miles*0.621371;
     } // end constructor Student
     public String encouragement()
     {
         String words = "";
         if(miles < 4)
         {
-            words = "You can do better than this!";
+            words = "I can do better than this!";
         }
         else if(miles > 4 && miles < 10)
         {
-          words = "You're doing great!";
+          words = "I'm doing great!";
         }
         else if (miles >= 10)
         {
             words = "Super!";
         }
         return words;
-    }
-    public void setRunning(double miles)
-    {
-        this.miles = miles;
     }
     public double speed(double time)
     {
@@ -47,7 +46,7 @@ public class Running
     public String toString()
     {
         String output = new String();
-        output = "I ran " + miles + " miles or " +encouragement() + "I ran at " + speed();
+        output = "I ran " + miles + " miles or " + kilometers + " kilometers. " + encouragement() + " I ran at " + speed;
         return output;
     }
 

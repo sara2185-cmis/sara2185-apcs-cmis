@@ -40,7 +40,7 @@ public class ClassMethodP4
     }// end method calcGPA
     public String getGPA()
     {
-        if (calcGPA() > 4.00)
+        if (calcGPA() >= 4.00)
         {
             return "A";
         }// end if
@@ -81,7 +81,8 @@ public class ClassMethodP4
         "Grade level: " + grade + "\n" +
         " Student number: " + studentNumber + "\n" +
         "Average gpa: " + calcGPA() + "\n" +
-         "Grade: " + getGPA();
+         "Grade: " + getGPA() + "\n" +
+         grades[0] + " " + grades[1] + " " + grades[2] + " " + grades[3] + " " + grades[4];
         return output;
     }
 }

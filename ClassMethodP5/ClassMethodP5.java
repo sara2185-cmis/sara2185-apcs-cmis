@@ -7,7 +7,10 @@ public class ClassMethodP5
         String school3 = new String("Grinnell");
 
         System.out.println(school1.compareTo(school2));
+        System.out.println(school2.compareTo(school1));
         System.out.println(school2.compareTo(school3));
+        System.out.println(school3.compareTo(school2));
+        System.out.println(school1.compareTo(school3));
         System.out.println(school3.compareTo(school1));
 
         String school4 = new String("Colby");

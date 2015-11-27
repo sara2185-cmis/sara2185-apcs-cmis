@@ -12,7 +12,8 @@ public class ClassMethodDriver
         Clock.totalSeconds();
         System.out.println( Clock);
         System.out.println("\n\n");
-        Clock.convertDaylightSaving(1);
+        Clock.convertDaylighSaving(1);
+        Clock.totalSeconds();
         System.out.println( Clock);
     }//end method main
 }// end class ClockDriver

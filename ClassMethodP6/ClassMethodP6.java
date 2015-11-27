@@ -32,7 +32,7 @@ public class ClassMethodP6
             }
             
         }
-        if(password.length() > 6 && compare == 1)
+        if(password.length() >= 6 && compare == 1)
         {
             System.out.print("You have successfully logged in");
         }
