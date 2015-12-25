@@ -40,19 +40,19 @@ public class ClassMethodP4
     }// end method calcGPA
     public String getGPA()
     {
-        if (calcGPA() >= 4.00)
+        if (this.calcGPA() >= 4.00)
         {
             return "A";
         }// end if
-        else if (calcGPA() > 3.00 && calcGPA() <= 4.00)
+        else if (this.calcGPA() > 3.00 && this.calcGPA() <= 4.00)
         {
             return "B";
         }// end else if
-        else if (calcGPA() > 2.00 && calcGPA() <= 3.00)
+        else if (this.calcGPA() > 2.00 && this.calcGPA() <= 3.00)
         {
             return "C";
         }// end else if
-        else if (calcGPA() > 1.00 && calcGPA() <= 2.00)
+        else if (this.calcGPA() > 1.00 && this.calcGPA() <= 2.00)
         {
             return "D";
         }// end else if
@@ -76,13 +76,21 @@ public class ClassMethodP4
     //3. toString()
     public String toString()
     {
-        String output = new String();
+        return String.format("The student's name is %s %s \n" +
+        "Grade level: %d \n" +
+        "Student number: %d\n" +
+        "Average gpa: %.02f\n" +
+        "Grade: %s\n" +
+        "%.02f %.02f %.02f %.02f %.02f", fname, lname, grade, studentNumber, calcGPA(), getGPA(), grades[0], grades[1], grades[2], grades[3], grades[4]);
+        /*
+         * String output = new String();
         output = "The student's name is " + fname + lname + "\n" +
         "Grade level: " + grade + "\n" +
         " Student number: " + studentNumber + "\n" +
         "Average gpa: " + calcGPA() + "\n" +
-         "Grade: " + getGPA() + "\n" +
-         grades[0] + " " + grades[1] + " " + grades[2] + " " + grades[3] + " " + grades[4];
+        "Grade: " + getGPA() + "\n" +
+        grades[0] + " " + grades[1] + " " + grades[2] + " " + grades[3] + " " + grades[4];
         return output;
+         */
     }
 }

@@ -8,7 +8,7 @@ public class RunningApp
         System.out.println(today);
         System.out.println("\n\n");
         today.kilometers(5.0);
-        today.kilometers(5.0);
+        
         today.speed(1.0);
         System.out.println(today);
         System.out.println("\n\n");
