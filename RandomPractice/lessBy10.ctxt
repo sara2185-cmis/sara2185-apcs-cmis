@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=a\ b\ c
+comment0.target=boolean\ lessBy10(int,\ int,\ int)
+comment1.params=a\ b\ c
+comment1.target=boolean\ lessBy102(int,\ int,\ int)
+numComments=2
