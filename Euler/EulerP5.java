@@ -1,20 +1,24 @@
 public class EulerP5
 {
-    public static void main( String[] args )
+    int num;
+    public static void main(String[] args) {
+        System.out.println(num.EulerP5());
+    }
+
+    public int EulerP5()
     {
-        for( int j = 0; j < 20; j++)
+        for(int i=0; i<20; i++)
         {
-            num = num*j;
-            for (int i = 0; i < 20; i++)
+            if(num/i == 0)
             {
-                if(num%i == 0)
-                {
-                    System.out.println(num);
-
-                }//end if
-            }//end for
+                return num;
+            }
+            else
+            {
+                return 1;
+            }
         }
-        
+    }
 
-    }//end method main 
-}// end class 
+   
+}
