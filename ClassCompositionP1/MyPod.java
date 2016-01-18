@@ -42,7 +42,7 @@ public class MyPod
         output = "The color is " + color + ", the memory capacity is " + memoryCapacity + ", and the songs are ";
         for(String song : songLibrary)
         {
-            output += song + " ";
+            output += song + ", ";
         }
         return output;
     }
