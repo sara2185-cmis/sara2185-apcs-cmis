@@ -23,7 +23,7 @@ public class ClassCompositionP4
         {
             System.out.println(myFamily.get(i));
         }
-        System.out.println("\n And here they are again... ") ;
+        System.out.println("\nAnd here they are again... ") ;
         for(String member: myFamily)
         {
             System.out.println(member);

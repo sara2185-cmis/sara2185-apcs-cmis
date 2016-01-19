@@ -3,7 +3,7 @@
  * Write a description of class Roster here.
  * 
  * @Sara
- * @version (a version number or a date)
+ * @January 18th, 2016
  */
 public class Roster
 {
