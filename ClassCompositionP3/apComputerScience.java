@@ -12,18 +12,23 @@ public class apComputerScience
 
     public apComputerScience()
     {
-        students.add(new Student("Hermione", "Granger", 11, 2188, 4.0, 4.0, 4.0, 4.0, 4.0));
-        students.add(new Student("Harry", "Potter", 11, 2121, 3.0, 3.5, 3.5, 3.0, 3.0));
-        students.add(new Student("Ron", "Weasley", 12, 1990, 2.0, 2.0, 2.5, 3.0, 2.5));
+
     }
-    
+
     public void addStudent (Student newStudent)
     {
         students.add(newStudent);
     }
-    public void dropSudent (String lastName)
+
+    public void dropStudent (String lastName)
     {
-        students.add(newStudent);
+        for(int i = 0; i < students.size(); i ++)
+        {
+            if(students.get(i).lname.equals(lastName))
+            {
+                students.remove(students.get(i));
+            }
+        }
     }
 
     public String findStudentWithMaxGPA()
@@ -31,9 +36,9 @@ public class apComputerScience
         Student maxGPA = new Student();
         for(int i = 0; i < students.size(); i ++)
         {
-            if(students.calcGPA() > maxGPA.calcGPA())
+            if( students.get(i).calcGPA() > maxGPA.calcGPA())
             {
-                maxGPA = students[i];
+                maxGPA = students.get(i);
             }
         }
         return maxGPA.fname;
@@ -42,7 +47,11 @@ public class apComputerScience
     public String toString()
     {
         String output = new String();
-        output = "The Student with the highest GPA is... " + findStudentWithMaxGPA();
+        for(int i = 0; i < students.size(); i++)
+        {
+            output += students.get(i) + "\n";
+        }
+        output += "\nThe Student with the highest GPA is... " + findStudentWithMaxGPA();
         return output;
     }
 }

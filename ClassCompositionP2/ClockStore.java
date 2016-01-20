@@ -21,9 +21,9 @@ public class ClockStore
         int most = 0;
         for(int i = 0; i < clocksInStock.length; i++)
         {
-            if(clocksInStock[i].totalSeconds() > most)
+            if(clocksInStock[i].totalSeconds() > clocksInStock[most].totalSeconds())
             {
-                most = i + 1;
+                most = i;
             }
         }
         return most;

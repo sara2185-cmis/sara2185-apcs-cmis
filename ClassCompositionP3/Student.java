@@ -9,7 +9,7 @@ public class Student
 {
     //1. Create instance variables
     public String fname;
-    private String lname;
+    public String lname;
     private int grade;
     private int studentNumber;
     private double grades[] = new double [5];
