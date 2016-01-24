@@ -2,7 +2,7 @@
 /**
  * Write a description of class ClockStore here.
  * 
- * @author (your name) 
+ * @Sara
  * @January 20th, 2016
  */
 public class ClockStore
