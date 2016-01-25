@@ -31,8 +31,8 @@ public class Roster
 
     public String toString()
     {
-        String output = new String();
-        output = "The Student with the highest GPA is... " + findStudentWithMaxGPA();
+        String output = new String(); 
+        output= "The Student with the highest GPA is... " + findStudentWithMaxGPA();
         return output;
     }
 }

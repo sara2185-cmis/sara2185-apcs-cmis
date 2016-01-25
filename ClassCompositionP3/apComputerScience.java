@@ -10,11 +10,6 @@ public class apComputerScience
 {
     private ArrayList<Student> students = new ArrayList<Student>();
 
-    public apComputerScience()
-    {
-
-    }
-
     public void addStudent (Student newStudent)
     {
         students.add(newStudent);

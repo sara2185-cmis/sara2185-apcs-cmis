@@ -10,6 +10,6 @@ public class ClockDriver
     {
         ClockStore MyClockStore = new ClockStore();
         System.out.print(MyClockStore);
-        System.out.print("The clock with the most seconds is clock number " + MyClockStore.mostSeconds());
+        System.out.print("The clock with the most seconds is clock with the index of " + MyClockStore.mostSeconds());
     }
 }
