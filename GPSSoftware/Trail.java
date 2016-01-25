@@ -33,20 +33,60 @@ public class Trail
         this.markers = markers;
     }
 
-    public void addMarker(int addition, int index)
+    public int getLength()
     {
-        markers.get(index)+= addition;
+        int length = 0;
+        for(int i = 0; i < markers.size(); i++)
+        {
+            length += markers.get(i);
+        }
+        return length;
     }
 
-    public void isLevelTrailSegment(int begin, int end)
+    public void addMarker(int addition)
     {
-       begin = markers.get(i);
-       end = markers.get(markers.size()-1);
-       for( int i = 0; i < markers.size(); i++)
-    {
+        markers.add(addition);
     }
-       if( begin == end &&)
-       {
+
+    public boolean isLevelTrailSegment(int begin, int end)
+    {
+        boolean levelOrNot = true;
+        for( int i = 0; i < markers.size(); i++)
+        {
+            if(i > 0 && Math.abs(markers.get(i) - markers.get(i-1)) > 10)
+            {
+                levelOrNot = false;
+            }
+            begin = markers.get(i);
+            end = markers.get(markers.size()-1);
+        }
+        if( begin == end && levelOrNot == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public boolean isDifficult(int begin, int end)
+    {
+        int totalUphill = 0;
+        for(int i = 0; i < markers.size(); i++)
+        {
+            if(i > 0 && markers.get(i) - markers.get(i-1) > 0)
+            {
+                totalUphill += markers.get(i); 
+            }
+        }
+        if(totalUphill > 100 && isLevelTrailSegment(begin, end))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -57,6 +97,7 @@ public class Trail
         {
             output += i + " " + markers.get(i) + "\n";
         }
+        
         return output;
     }
 }
