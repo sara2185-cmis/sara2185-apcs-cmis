@@ -50,15 +50,18 @@ public class Trail
 
     public boolean isLevelTrailSegment(int begin, int end)
     {
-        boolean levelOrNot = true;
+        boolean levelOrNot = false;
         for( int i = 0; i < markers.size(); i++)
         {
-            if(i > 0 && Math.abs(markers.get(i) - markers.get(i-1)) > 10)
+            if(i > 0 && Math.abs(markers.get(i) - markers.get(i-1)) < 10)
+            {
+                levelOrNot = true;
+            }
+            else
             {
                 levelOrNot = false;
             }
-            begin = markers.get(i);
-            end = markers.get(markers.size()-1);
+        
         }
         if( begin == end && levelOrNot == true)
         {

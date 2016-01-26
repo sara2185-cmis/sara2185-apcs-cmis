@@ -10,33 +10,47 @@ public class TrailDriver
     public static void main( String[] args )
     {
         Trail runningTrail = new Trail();
-        System.out.println(runningTrail);
-          System.out.println("The trail's total distance is " + runningTrail.getLength() + " kilometers");
-        System.out.println(runningTrail.isDifficult(0, 13));
-        System.out.println( runningTrail.isLevelTrailSegment(1, 10));
-        
+        System.out.println("RUNNING TRAIL: \n" + runningTrail);
+        System.out.println("The running trail's total distance is " + runningTrail.getLength() + " kilometers");
+         System.out.println("The running trail is difficult: " + runningTrail.isDifficult(0, runningTrail.markers.size()-1));
+        System.out.println("The running trail from marker number 5 to 9 is difficult: " + runningTrail.isDifficult(5, 9));
+        System.out.println("The running trail is level: " + runningTrail.isLevelTrailSegment(0, runningTrail.markers.size()-1));
+        System.out.println("The running trail from marker number 3 to 7 is level: " + runningTrail.isLevelTrailSegment(3, 7)+ "\n");
+     
+
         ArrayList<Integer> randomMarkers = new ArrayList<Integer>();
-        randomMarkers.add(30);
+        randomMarkers.add(100);
         randomMarkers.add(90);
         randomMarkers.add(80); 
-        randomMarkers.add(40);
-        randomMarkers.add(80);
+        randomMarkers.add(60);
+        randomMarkers.add(70);
+        randomMarkers.add(50);
         randomMarkers.add(20);
+        randomMarkers.add(10);
         Trail parkTrail = new Trail( randomMarkers);
-        System.out.println("The trail's total distance is " + parkTrail.getLength() + " kilometers");
-        System.out.println(runningTrail.isDifficult(0, randomMarkers.size()));
-        System.out.println( runningTrail.isLevelTrailSegment(1, 10));
-         
+        System.out.println("PARK TRAIL: \n" + parkTrail);
+        System.out.println("The park trail's total distance is " + parkTrail.getLength() + " kilometers");
+        System.out.println("The park trail is difficult: "+ runningTrail.isDifficult(0, randomMarkers.size()-1));
+        System.out.println("The park trail from marker number 2 to 7 is difficult: "+ runningTrail.isDifficult(2, 5));
+        System.out.println("The park trail is level: " + runningTrail.isLevelTrailSegment(0, randomMarkers.size()-1));
+        System.out.println("The park trail from marker number 3 to 6 is level: " + runningTrail.isLevelTrailSegment(1, 10) + "\n");
+
         ArrayList<Integer> newMarkers = new ArrayList<Integer>();
         newMarkers.add(30);
-        newMarkers.add(90);
-        newMarkers.add(70);
+        newMarkers.add(35);
+        newMarkers.add(25);
+        newMarkers.add(25);
+        newMarkers.add(30);
+        newMarkers.add(30);
+        newMarkers.add(35);
         newMarkers.add(30);
         Trail woodsTrail = new Trail( newMarkers);
-       System.out.println("The trail's total distance is " + woodsTrail.getLength() + " kilometers");
-        System.out.println("The trailwoodsTrail.isDifficult(0, newMarkers.size()));
-        System.out.println( runningTrail.isLevelTrailSegment(1, 10));
-        
-       
+        System.out.println("WOODS TRAIL: \n" + woodsTrail);
+        System.out.println("The woods trail's total distance is " + woodsTrail.getLength() + " kilometers");
+        System.out.println("The woods trail is difficult: "+ woodsTrail.isDifficult(0, newMarkers.size()-1));
+        System.out.println("The woods trail from marker number 3 to 5 is difficult: "+ woodsTrail.isDifficult(3, 5));
+        System.out.println("The woods trail is level: " + runningTrail.isLevelTrailSegment(0, newMarkers.size()-1));
+        System.out.println("The woods trail from marker number 2 to 6 is level: " + runningTrail.isLevelTrailSegment(2, 6));
+
     }
 }
