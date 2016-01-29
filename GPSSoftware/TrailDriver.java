@@ -19,13 +19,13 @@ public class TrailDriver
      
 
         ArrayList<Integer> randomMarkers = new ArrayList<Integer>();
-        randomMarkers.add(100);
+        randomMarkers.add(10);
         randomMarkers.add(90);
-        randomMarkers.add(80); 
+        randomMarkers.add(60); 
         randomMarkers.add(60);
-        randomMarkers.add(70);
-        randomMarkers.add(50);
+        randomMarkers.add(90);
         randomMarkers.add(20);
+        randomMarkers.add(50);
         randomMarkers.add(10);
         Trail parkTrail = new Trail( randomMarkers);
         System.out.println("PARK TRAIL: \n" + parkTrail);
@@ -38,7 +38,7 @@ public class TrailDriver
         ArrayList<Integer> newMarkers = new ArrayList<Integer>();
         newMarkers.add(30);
         newMarkers.add(35);
-        newMarkers.add(25);
+        newMarkers.add(35);
         newMarkers.add(25);
         newMarkers.add(30);
         newMarkers.add(30);

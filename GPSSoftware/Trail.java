@@ -16,9 +16,9 @@ public class Trail
         markers.add(35);
         markers.add(20);
         markers.add(45);
-        markers.add(60);
+        markers.add(50);
         markers.add(55);
-        markers.add(70);
+        markers.add(50);
         markers.add(45);
         markers.add(65);
         markers.add(80);
@@ -53,12 +53,12 @@ public class Trail
         boolean levelOrNot = true;
         for( int i = begin; i < end; i++)
         {
-            if(i > begin && Math.abs(markers.get(i) - markers.get(i-1)) > 10)
+            if( i > begin && Math.abs(markers.get(i) - markers.get(i-1)) > 10)
             {
                 levelOrNot = false;
             }                    
         }
-        if( begin == end && levelOrNot == true)
+        if( markers.get(begin) == markers.get(end) && levelOrNot == true)
         {
             return true;
         }
@@ -78,7 +78,7 @@ public class Trail
                 totalUphill += markers.get(i); 
             }
         }
-        if(totalUphill > 100 && isLevelTrailSegment(begin, end))
+        if(totalUphill > 100 && !isLevelTrailSegment(begin, end))
         {
             return true;
         }
@@ -95,7 +95,6 @@ public class Trail
         {
             output += i + " " + markers.get(i) + "\n";
         }
-        
         return output;
     }
 }
