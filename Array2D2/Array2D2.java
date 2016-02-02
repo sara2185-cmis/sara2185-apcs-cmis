@@ -11,14 +11,11 @@ public class Array2D2
     {
         int[][] numbers = new int[3][5];
         int sum = 0;
-        int rowSum0 = 0;
-        int rowSum1 = 0;
-        int rowSum2 = 0;
-        int colSum0 = 0;
-        int colSum1 = 0;
-        int colSum2 = 0;
-         int colSum3 = 0;
-          int colSum4 = 0;
+        int rSum = 0;
+        int cSum = 0;
+        int rowSum = 0;
+        int colSum = 0;
+        
         for(int row = 0; row < numbers.length; row++)
         {
             for(int col = 0; col < numbers[0].length; col++)
@@ -42,54 +39,26 @@ public class Array2D2
             }
         }
         System.out.println("The sum total of all 15 elements is " + sum);
-
+        
+        for(int row = 0; row < numbers.length; row++)
+        {
+            for(int col = 0; col < numbers[0].length; col++)
+            {
+                rowSum += numbers[row][col];
+            }
+            
+            System.out.println("The sum of row " + row + " is " + rowSum);
+            rowSum = 0;
+        }
         for(int col = 0; col < numbers[0].length; col++)
         {
-            rowSum0 += numbers[0][col];
-            
+            for (int row = 0; row < numbers.length; row++)
+            {
+                colSum += numbers[row][col];
+            }
+            System.out.println("The sum of column " + col + " is " + colSum);
+            colSum = 0;
         }
-        System.out.println("The sum of row 0 " + " is " + rowSum0);
-        for(int col = 0; col < numbers[0].length; col++)
-        {
-            rowSum1 += numbers[1][col];
-            
-        }
-        System.out.println("The sum of row 1 " + " is " + rowSum1);
-        for(int col = 0; col < numbers[0].length; col++)
-        {
-            rowSum2 += numbers[2][col];
-            
-        }
-        System.out.println("The sum of row 2 " + " is " + rowSum2);
-        for(int row = 0; row < numbers.length; row++)
-        {
-            colSum0 += numbers[row][0];
-        }
-        System.out.println("The sum of column 0 " + " is " + colSum0);
-        for(int row = 0; row < numbers.length; row++)
-        {
-            colSum1 += numbers[row][1];
-            
-        }
-        System.out.println("The sum of column 1 " + " is " + colSum1);
-        for(int row = 0; row < numbers.length; row++)
-        {
-            colSum2 += numbers[row][2];
-            
-        }
-        System.out.println("The sum of column 2 " + " is " + colSum2);
-        for(int row = 0; row < numbers.length; row++)
-        {
-            colSum3 += numbers[row][3];
-            
-        }
-        System.out.println("The sum of column 3 " + " is " + colSum3);
-        for(int row = 0; row < numbers.length; row++)
-        {
-            colSum4 += numbers[row][4];
-            
-        }
-        System.out.println("The sum of column 4 " + " is " + colSum4);
-
+      
     }
 }

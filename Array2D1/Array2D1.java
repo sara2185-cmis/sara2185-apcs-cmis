@@ -24,7 +24,7 @@ public class Array2D1
             {
                 if( numbers[row][col] == 5)
                 {
-                    System.out.println("The row is: " +row + " and the column is" + col);
+                    System.out.println("The row is: " +row + " and the column is " + col);
                 }
             }
         }

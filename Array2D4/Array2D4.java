@@ -18,11 +18,11 @@ public class Array2D4
         {
             for(int col = 0; col < table[0].length; col++)
             {
-                table[row][col] ={{"A", "B", "C", "D", "E"},{"F", "G", "H", "I", "J"},{"K", "L", "M", "N" "O"}};
+                table[row][col] =
             }
         }
             
-        }
+        
         for(int row = 0; row < table.length; row++)
         {
             for(int col = 0; col < table[0].length; col++)
