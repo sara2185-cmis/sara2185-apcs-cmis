@@ -4,14 +4,11 @@
  * @Sara
  * @January 29th, 2016
  */
-import javax.swing.JOptionPane;
-
+import java.util.ArrayList;
 public class Jukebox
 {
 
-    int r = Integer.parseInt(JOptionPane.showInputDialog("How many rows?"));
-    int c = Integer.parseInt(JOptionPane.showInputDialog("How many columns?"));
-    MySong[][] songList = new MySong[r][c];
+    MySong[][] songList = new MySong[3][4];
     public Jukebox()
     {
         songList[0][0] = new MySong( "Jet Airliner", 5 );
@@ -31,23 +28,24 @@ public class Jukebox
 
     public MySong randomSong()
     {
-        return songList[r*(int)(Math.random())][c*(int)(Math.random())];
+        return songList[3*(int)(Math.random())][4*(int)(Math.random())];
     }
 
-    public MySong playSongofRating(int rating)
+    public ArrayList<MySong> playSongofRating(int rating)
     {
-        MySong songs = new MySong();
+        
+        ArrayList<MySong> songs = new ArrayList<MySong>();
         for(int row = 0; row < songList.length; row++)
         {
             for(int col = 0; col < songList[0].length; col++)
             {
                 if(songList[row][col].rating == rating)
                 {
-                    songs = songList[row][col];
+                   songs.add(songList[row][col]);
 
                 } 
             } 
-            
+
         }
         return songs;
     }
@@ -55,14 +53,15 @@ public class Jukebox
     public String toString()
     {
         String output = new String();
-        for(int row = 0; row < songList.length; row++)
+        for(MySong[] row: songList)
         {
-            for(int col = 0; col < songList[0].length; col++)
+            for(MySong element: row)
             {
-                output += songList[row][col] + "\t";
-            } 
-            output += "\n";
+                 output += element + "\n";
+            }
         }
+        
+        
         return output;
     }
 
