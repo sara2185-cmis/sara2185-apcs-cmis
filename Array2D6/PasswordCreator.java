@@ -7,30 +7,21 @@ public class PasswordCreator
         String password = JOptionPane.showInputDialog( "What is your password?");
         int compare = 0;
         String lastNameLowerCase = lastName.toLowerCase();
+        String passwordLowerCase = password.toLowerCase();
 
-        for (int i = 0; i < password.length(); i++)
+        while(compare >=0)
         {
-            String firstLetter = new String(password.substring(i, i+1));
-            String firstLetterOfLastName = new String(lastName.substring(i, i+1));
-            String restOfPassWord = new String(password.substring(i+1, password.length()-1));
-            String restOfLastName = new String(lastName.substring(i+1, lastName.length()-1));
-            String restOfLastName = new String(lastName.substring(i+1, lastName.length()-1));
-            System.out.print(restOfPassWord);
-            if(firstLetter.equals(firstLetterOfLastName) && restOfPassWord.equals(restOfLastName ))
+            compare = passwordLowerCase.indexOf(lastNameLowerCase);
+            if(compare >= 0)
             {
-                compare = 1;
+                passwordLowerCase = JOptionPane.showInputDialog( "What is your password?").toLowerCase();
             }
-            
+            else
+            {
+                System.out.print("You have successfully logged in");
+            }
+        }
 
-        }
-        if(password.length() >= 6 && compare == 1)
-        {
-            System.out.print("You have successfully logged in");
-        }
-        else{
-
-            System.out.print("Wrong password");
-        }
     }
 }
 

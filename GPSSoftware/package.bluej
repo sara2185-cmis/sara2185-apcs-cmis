@@ -1,3 +1,28 @@
 #BlueJ package file
-#Mon Jan 25 09:28:32 ICT 2016
+objectbench.height=76
+objectbench.width=686
+package.editor.height=400
+package.editor.width=560
+package.editor.x=881
+package.editor.y=309
+package.numDependencies=0
+package.numTargets=2
+package.showExtends=true
+package.showUses=true
 project.charset=UTF-8
+target1.height=50
+target1.name=TrailDriver
+target1.showInterface=false
+target1.type=ClassTarget
+target1.typeParameters=
+target1.width=100
+target1.x=90
+target1.y=10
+target2.height=50
+target2.name=Trail
+target2.showInterface=false
+target2.type=ClassTarget
+target2.typeParameters=
+target2.width=80
+target2.x=200
+target2.y=10
