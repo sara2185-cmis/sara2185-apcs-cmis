@@ -71,11 +71,11 @@ public class Trail
     public boolean isDifficult(int begin, int end)
     {
         int totalUphill = 0;
-        for(int i = 0; i < markers.size(); i++)
+        for(int i = begin; i < end; i++)
         {
             if(i > 0 && markers.get(i) - markers.get(i-1) > 0)
             {
-                totalUphill += markers.get(i); 
+                totalUphill += (markers.get(i) - markers.get(i-1)); 
             }
         }
         if(totalUphill > 100 && !isLevelTrailSegment(begin, end))
