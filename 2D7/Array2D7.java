@@ -15,9 +15,9 @@ public class Array2D7
         int rGuess = Integer.parseInt(JOptionPane.showInputDialog("Which row is zero in?"));
         int cGuess = Integer.parseInt(JOptionPane.showInputDialog("Which column is zero in?"));
         int[][] gameboard = new int[r][c];
-        gameboard[(int)Math.random()*r][(int)Math.random() * c] = 0;
-        int randomRow =(int)Math.random() * r;
-        int randomColumn = (int)Math.random() * c;
+        int randomRow =(int)(Math.random() * r);
+        int randomColumn = (int)(Math.random() * c);
+        gameboard[randomRow][randomColumn] = 0;
         int offByRow = Math.abs( randomRow - rGuess);
         int offByColumn = Math.abs( randomColumn - cGuess);
         for(int row = 0; row < gameboard.length; row++)
