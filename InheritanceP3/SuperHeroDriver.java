@@ -33,10 +33,18 @@ public class SuperHeroDriver
         SuperHero[][] capedHeroes= new SuperHero[3][3];
          for(SuperHero eachHero: heroes)
         {
-            if(heroes.isCaped() == true)
+            if(eachHero.isCaped() == true)
             {
-                capedHeroes += heroes;
+                capedHeroes[][] += eachHero;
             }
+        }
+       for(int row = 0; row < capedHeroes.length; row++)
+        {
+            for(int col = 0; col < capedHeroes[0].length; col++)
+            {
+                System.out.print(capedHeroes[row][col]);
+            }
+            System.out.println();
         }
     }
 }

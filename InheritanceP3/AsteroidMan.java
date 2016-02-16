@@ -14,10 +14,14 @@ public class AsteroidMan extends SuperHero
         super();
     }
 
-    
     public String motto()  
     {
         return "Feel my rock-solid punch!";
+    }
+    
+     public String toString()
+    {
+        return super.toString();
     }
 
 }

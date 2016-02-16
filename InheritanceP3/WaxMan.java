@@ -20,5 +20,10 @@ public class WaxMan extends SuperHero
     {
         return "Don't play with candles kids!";
     }
+    
+     public String toString()
+    {
+        return super.toString();
+    }
 
 }
