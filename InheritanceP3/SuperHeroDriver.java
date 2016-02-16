@@ -24,21 +24,31 @@ public class SuperHeroDriver
         heroes.add(Rocky);
         heroes.add(Yolk);
         heroes.add(Bernie);
-
+        
+        int i = 0;
         for(SuperHero eachHero: heroes)
         {
             System.out.println(eachHero);
         }
-        
+
         SuperHero[][] capedHeroes= new SuperHero[3][3];
-         for(SuperHero eachHero: heroes)
+        for(int row = 0; row < capedHeroes.length; row++)
         {
-            if(eachHero.isCaped() == true)
+            for(int col = 0; col < capedHeroes[0].length; col++)
             {
-                capedHeroes[][] += eachHero;
+                if(heroes.get(i).isCaped() == true)
+                {
+                    capedHeroes[row][col] = heroes.get(i);
+                    heroes.remove(heroes.get(i));
+                       
+                }
+                else
+                {
+                    i++;
+                }
             }
         }
-       for(int row = 0; row < capedHeroes.length; row++)
+        for(int row = 0; row < capedHeroes.length; row++)
         {
             for(int col = 0; col < capedHeroes[0].length; col++)
             {

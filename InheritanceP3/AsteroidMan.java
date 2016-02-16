@@ -21,7 +21,7 @@ public class AsteroidMan extends SuperHero
     
      public String toString()
     {
-        return super.toString();
+        return "AsteroidMan\t" + super.toString();
     }
 
 }

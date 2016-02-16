@@ -18,12 +18,12 @@ public class WaxMan extends SuperHero
 
     public String motto()  
     {
-        return "Don't play with candles kids!";
+        return "Don't play with candles!";
     }
     
      public String toString()
     {
-        return super.toString();
+        return "WaxMan\t" + super.toString();
     }
 
 }

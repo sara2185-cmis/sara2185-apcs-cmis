@@ -55,8 +55,8 @@ public abstract class Student
     {
         String output = new String("");
         output = "First name: " + firstName +
-        "\nMajor: " + major +
-        "\nUnits: " + units;
+        " Major: " + major +
+        " Units: " + units;
         return output;
     }
 

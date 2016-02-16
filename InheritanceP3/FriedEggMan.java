@@ -20,5 +20,10 @@ public class FriedEggMan extends SuperHero
     {
         return "Fried eggs never hurt nobody.";
     }
+    
+    public String toString()
+    {
+        return "FriedEggMan\t" + super.toString();
+    }
 
 }
