@@ -6,10 +6,7 @@
  */
 public class FriedEggMan extends SuperHero
 {
-    private String suitColor;
-    private boolean hasCape;
-    private String name;
-    
+   
     public FriedEggMan()
     {
         super();
@@ -23,7 +20,7 @@ public class FriedEggMan extends SuperHero
     
     public String toString()
     {
-        return "FriedEggMan\t" + super.toString();
+        return super.toString();
     }
 
 }

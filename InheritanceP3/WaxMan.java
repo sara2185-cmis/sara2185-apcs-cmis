@@ -7,9 +7,7 @@
  */
 public class WaxMan extends SuperHero
 {
-    private String suitColor;
-    private boolean hasCape;
-    
+   
     public WaxMan()
     {
         super();
@@ -23,7 +21,7 @@ public class WaxMan extends SuperHero
     
      public String toString()
     {
-        return "WaxMan\t" + super.toString();
+        return super.toString();
     }
 
 }

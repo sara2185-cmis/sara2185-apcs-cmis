@@ -6,8 +6,7 @@
  */
 public class AsteroidMan extends SuperHero
 {
-    private String suitColor;
-    private boolean hasCape;
+ 
    
     public AsteroidMan()
     {
@@ -21,7 +20,7 @@ public class AsteroidMan extends SuperHero
     
      public String toString()
     {
-        return "AsteroidMan\t" + super.toString();
+        return  super.toString();
     }
 
 }
