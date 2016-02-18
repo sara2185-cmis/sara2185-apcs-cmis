@@ -27,32 +27,57 @@ public class SuperHeroDriver
         heroes.add(Rocky);
         heroes.add(Yolk);
         heroes.add(Bernie);
-
+        
+        int size = heroes.size()-1;
         int i = 0;
+        
+        System.out.println("\nOriginal set of ArrayList heroes...");
         for(SuperHero eachHero: heroes)
         {
             System.out.println(eachHero);
         }
-
+        
+        
+        SuperHero[][] capedHeroes = new SuperHero[3][3];
+         for(int row = 0; row < capedHeroes.length; row++)
+        {
+            for(int col = 0; col < capedHeroes[0].length; col++)
+            {
+                if(heroes.get(i).isCaped() == true)
+                {
+                    capedHeroes[row][col] = heroes.get(i);
+                    heroes.remove(heroes.get(i));
+                }
+                else
+                {
+                    capedHeroes[row][col] = null;
+                    i++;
+                }
+            }
+        }
+         
+        
+        
+        
+        
+        
+        /*
+        
         SuperHero[][] capedHeroes= new SuperHero[3][3];
         for(int row = 0; row < capedHeroes.length; row++)
         {
             for(int col = 0; col < capedHeroes[0].length; col++)
             {
-                if(i < heroes.size())
+                if(i < size)
                 {
                     if(heroes.get(i).isCaped() == true)
                     {
                         capedHeroes[row][col] = heroes.get(i);
                         heroes.remove(heroes.get(i));
-
                     }
                     else
                     {
-                        if(i < heroes.size())
-                        {
-                            i++;
-                        }
+                        i++;
                     }
                 }
                 else
@@ -61,14 +86,40 @@ public class SuperHeroDriver
                 }
             }
         }
+        */
+        
+        System.out.println("\nPrinting 2D Array capedHeroes...");
         for(int row = 0; row < capedHeroes.length; row++)
         {
             for(int col = 0; col < capedHeroes[0].length; col++)
             {
-                System.out.print(capedHeroes[row][col].getName() + "\t");
+                if(i < capedHeroes.length-1)
+                {
+                    System.out.print(capedHeroes[row][col].getName() + "\t");
+                    i++;
+                }
             }
             System.out.println();
         }
+        
+        System.out.println("\nPrinting contents of capedHeroes...");
+        for(int row = 0; row < capedHeroes.length; row++)
+        {
+            for(int col = 0; col < capedHeroes[0].length; col++)
+            {
+                if(i < capedHeroes.length-1)
+                {
+                    System.out.print(capedHeroes[row][col] + "\t");
+                    i++;
+                }
+            }
+            System.out.println();
+        }
+        
+        System.out.println("\nRemaining set of ArrayList heroes...");
+         for(SuperHero eachHero: heroes)
+        {
+            System.out.println(eachHero);
+        }
     }
-
 }
