@@ -38,50 +38,46 @@ public class SuperHeroDriver
         }
 
         SuperHero[][] capedHeroes = new SuperHero[3][3];
-        for(int row = 0; row < capedHeroes.length; row++)
-        {
-            for(int col = 0; col < capedHeroes[0].length; col++)
-            {
-                for(SuperHero hero : heroes)
-                {
-                    if(hero.isCaped() == true)
-                    {
-                        capedHeroes[row][col] = hero;
-                        heroes.remove(hero);
-                    }
-                    
-                }
-            }
-        }
-
-        
-        
         /*
-        SuperHero[][] capedHeroes= new SuperHero[3][3];
         for(int row = 0; row < capedHeroes.length; row++)
         {
         for(int col = 0; col < capedHeroes[0].length; col++)
         {
-        if(i < heroes.size()-1)
+        if(hero.isCaped() == true)
         {
-        if(heroes.get(i).isCaped() == true)
-        {
-        capedHeroes[row][col] = heroes.get(i);
-        heroes.remove(heroes.get(i));
+        capedHeroes[row][col] = hero;
+        heroes.remove(hero);
         }
-        else
-        {
-        i++;
-        }
-        }
-        else
-        {
-        capedHeroes[row][col] = null;
-        }
+
         }
         }
 
          */
+
+     
+        for(int row = 0; row < capedHeroes.length; row++)
+        {
+            for(int col = 0; col < capedHeroes[0].length; col++)
+            {
+                if(i < heroes.size()-1)
+                {
+                    if(heroes.get(i).isCaped() == true)
+                    {
+                        capedHeroes[row][col] = heroes.get(i);
+                        heroes.remove(heroes.get(i));
+                    }
+                    else
+                    {
+                        i++;
+                    }
+                }
+                else
+                {
+                    capedHeroes[row][col] = null;
+                }
+            }
+        }
+
         System.out.println("\nPrinting 2D Array capedHeroes...");
         for(int row = 0; row < capedHeroes.length; row++)
         {

@@ -1,44 +1,27 @@
 
-public class Scales
+public class Scales extends Piano
 {
-    //1. Create instance variables
-    private String type;
-    private String key;
-    private String flatsSharps;
-    private String tonality;
-    private String articulation;
-    //2. Write constructor to initialize instance variables
-    public Scales(String type, String key, String flatsSharps, String tonality, String articulation)
+    int beat;
+    
+    public Scales(String key, String flatsSharps, String tonality, String articulation, int beat, String type)
     {
-        this.type = type;
-        this.key = key;
-        this.flatsSharps = flatsSharps;
-        this.tonality = tonality;
-        this.articulation = articulation;
-    } // end constructor Song
-    public String beat()
-    {
-        if( type.equals("Scales a third apart"))
-        {
-            return "Beat = 92";
-        }
-        else if(type.equals("Scales a sixth apart"))
-        {
-            return "Beat = 88";
-        }
-        else
-        {
-            return "Beat = 96";
-        }
+        super(key, flatsSharps, tonality, articulation);
+        beat = 88;
+        String types[] = new String[]{"Scales a third apart", "Scales a sixth apart", "Scales " };
+        type = types[(int)(Math.random() *types.length)];
+        
+ 
     }
     
-    //3. toString()
+    public int getBeat()
+    {
+        return beat;
+    }
+
     public String toString()
     {
         String output = new String();
-        output = type + " in " + key + flatsSharps + " " + tonality + " " + articulation + "\n " + beat();
+        output = super.toString();
         return output;
     }
-    
-
-} // end Card
+} // end 

@@ -1,33 +1,29 @@
 
 /**
- * Write a description of class Arpeggios here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Sara
+ * @Feb 17th, 2016
  */
-public class Arpeggios
+
+public class Arpeggios extends Piano
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Arpeggios
-     */
-    public Arpeggios()
+    int beat;
+    public Arpeggios( String key, String flatsSharps, String tonality, String articulation)
     {
-        // initialise instance variables
-        x = 0;
+        super(key, flatsSharps, tonality, articulation);
+        beat = 88;
+ 
+    }
+    
+    public int getBeat()
+    {
+        return beat;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public String toString()
     {
-        // put your code here
-        return x + y;
+        String output = new String();
+        output = super.toString();
+        return output;
     }
-}
+} // end 
+
