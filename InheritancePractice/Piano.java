@@ -6,7 +6,7 @@ public class Piano
     private String tonality;
     private String articulation;
     private String type;
-
+    private int beat;
 
     public Piano(String key, String flatsSharps, String articulation)
     {
@@ -21,7 +21,7 @@ public class Piano
         return type;
     }
 
-    
+   
     public String toString()
     {
         String output = new String();

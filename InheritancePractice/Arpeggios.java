@@ -7,11 +7,16 @@
 public class Arpeggios extends Piano
 {
     int beat;
-    public Arpeggios( String key, String flatsSharps, String articulation, String tonality)
+    private String key;
+    private String flatsSharps;
+    private String tonality;
+    private String articulation;
+    private String type;
+    public Arpeggios( String key, String flatsSharps, String articulation, int beat, String tonality)
     {
         super(key, flatsSharps, articulation);
-        beat = 88;
-        String[] tonalities = {"major", "minor"}; 
+        beat = 86;
+        String[] tonalities = new String[]{"major", "minor"}; 
         tonality = tonalities[(int)(Math.random() *tonalities.length)];
     }
     
@@ -23,7 +28,7 @@ public class Arpeggios extends Piano
     public String toString()
     {
         String output = new String();
-        output = super.toString();
+        output = super.toString() + " " + getBeat();
         return output;
     }
 } // end 

@@ -21,17 +21,18 @@ public class PianoApp
         String flatsSharps[] = {"\u266D", "#", " "};
         String articulation[] = {"staccato", "legato"};
         String type = "";
+        String tonality = "";
         int beat = 0;
 
         for(int i = 0; i < scalesInput; i++)
         {
-            thisScales[i] = new Scales(key[(int)(Math.random() *key.length)], flatsSharps[(int)(Math.random() *flatsSharps.length)], tonality[(int)(Math.random() * tonality.length)], articulation[(int)(Math.random() * articulation.length)], beat, type);
+            thisScales[i] = new Scales(key[(int)(Math.random() *key.length)], flatsSharps[(int)(Math.random() *flatsSharps.length)], articulation[(int)(Math.random() * articulation.length)], beat, type, tonality);
             thisPiano.add(thisScales[i]);
         }
 
         for(int i = 0; i < arpeggiosInput; i++)
         {
-            thisArpeggios[i]  = new Arpeggios(key[(int)(Math.random() *key.length)], flatsSharps[(int)(Math.random() *flatsSharps.length)], tonality[(int)(Math.random() * tonality.length)], articulation[(int)(Math.random() * articulation.length)]);
+            thisArpeggios[i]  = new Arpeggios(key[(int)(Math.random() *key.length)], flatsSharps[(int)(Math.random() *flatsSharps.length)], articulation[(int)(Math.random() * articulation.length)], beat, tonality);
             thisPiano.add(thisArpeggios[i]);
         }
         
