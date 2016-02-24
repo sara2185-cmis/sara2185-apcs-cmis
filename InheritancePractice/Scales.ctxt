@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=key\ flatsSharps\ tonality\ articulation\ beat\ type
-comment0.target=Scales(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String)
+comment0.params=key\ flatsSharps\ articulation\ beat\ type\ tonality
+comment0.target=Scales(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ java.lang.String)
 comment1.params=
 comment1.target=int\ getBeat()
 comment2.params=

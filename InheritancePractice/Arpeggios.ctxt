@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.params=key\ flatsSharps\ tonality\ articulation
+comment0.params=key\ flatsSharps\ articulation\ tonality
 comment0.target=Arpeggios(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
 comment1.params=
 comment1.target=int\ getBeat()

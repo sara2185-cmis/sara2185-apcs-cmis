@@ -8,11 +8,10 @@ public class Piano
     private String type;
 
 
-    public Piano(String key, String flatsSharps, String tonality, String articulation)
+    public Piano(String key, String flatsSharps, String articulation)
     {
         this.key = key;
         this.flatsSharps = flatsSharps;
-        this.tonality = tonality;
         this.articulation = articulation;
 
     } 

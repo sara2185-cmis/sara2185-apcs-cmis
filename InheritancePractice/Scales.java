@@ -3,14 +3,15 @@ public class Scales extends Piano
 {
     int beat;
     
-    public Scales(String key, String flatsSharps, String tonality, String articulation, int beat, String type)
+    public Scales(String key, String flatsSharps, String articulation, int beat, String type, String tonality)
     {
-        super(key, flatsSharps, tonality, articulation);
+        super(key, flatsSharps, articulation);
         beat = 88;
         String types[] = new String[]{"Scales a third apart", "Scales a sixth apart", "Scales " };
         type = types[(int)(Math.random() *types.length)];
+        String tonalities[] = {"major", "harmonic minor", "melodic minor"};
+        tonality = tonalities[(int)(Math.random() *tonalities.length)];
         
- 
     }
     
     public int getBeat()
