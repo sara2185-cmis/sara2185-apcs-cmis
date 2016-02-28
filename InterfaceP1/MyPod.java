@@ -1,33 +1,34 @@
 
 /**
- * Write a description of class MyPod here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Sara
+ * @February 28th, 2016
  */
-public class MyPod
+public class MyPod extends MyDevice
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class MyPod
-     */
     public MyPod()
     {
-        // initialise instance variables
-        x = 0;
+        super();
+
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public MyPod(int memory, String color)
     {
-        // put your code here
-        return x + y;
+        super(memory, color);
+
+    }
+
+     public void connectToBluetooth()
+    {
+       System.out.println("Connecting to bluetooth for a MyPod");
+    }
+    
+    public String toString()
+    {
+        String output = new String("");
+        output = super.toString() ;
+
+        return output;
     }
 }

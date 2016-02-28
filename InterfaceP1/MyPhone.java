@@ -1,33 +1,35 @@
 
 /**
- * Write a description of class MyPhone here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Sara
+ * @February 13th, 2016
  */
-public class MyPhone
+public class MyPhone extends MyDevice
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class MyPhone
-     */
+    private String carrier;
+    
     public MyPhone()
     {
-        // initialise instance variables
-        x = 0;
+        super();
+        this.carrier = new String("TOT");
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+ 
+    public MyPhone(int memory, String color, String carrier)
     {
-        // put your code here
-        return x + y;
+        super(memory, color);
+        this.carrier = carrier;
+    }
+   
+     public void connectToBluetooth()
+    {
+       System.out.println("Connecting to bluetooth for a MyPhone");
+    }
+    
+    public String toString()
+    {
+        String output = new String("");
+        output = super.toString() + 
+        "\nCarrier: " + carrier;
+        return output;
     }
 }

@@ -1,17 +1,10 @@
 
 /**
- * Write a description of interface Discountable here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Sara
+ * @February 26th, 2016
  */
 public interface Discountable
 {
-    /**
-     * An example of a method header - replace this comment with your own
-     * 
-     * @param  y    a sample parameter for a method
-     * @return        the result produced by sampleMethod 
-     */
-    int sampleMethod(int y);
+    public abstract String discountable();
 }

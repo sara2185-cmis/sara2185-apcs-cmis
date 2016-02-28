@@ -1,33 +1,32 @@
 
 /**
- * Write a description of class MyDevice here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Sara
+ * @February 28th, 2016
  */
-public class MyDevice
+public abstract class MyDevice implements Connectable
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class MyDevice
-     */
+    private int memory;
+    private String color;
+    
     public MyDevice()
     {
-        // initialise instance variables
-        x = 0;
+        this.memory = 8;
+        this.color = new String("Black");
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+ 
+    public MyDevice(int memory, String color)
     {
-        // put your code here
-        return x + y;
+        this.memory = memory;
+        this.color = color;
+
+    }
+   
+    public String toString()
+    {
+        String output = new String("");
+        output = "Memory: " + memory + 
+        "\nColor: " + color;
+        return output;
     }
 }
