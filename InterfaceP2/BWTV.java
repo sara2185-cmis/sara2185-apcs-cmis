@@ -7,7 +7,7 @@
 public class BWTV extends TV implements Analog
 {
     
-    public BMTV()
+    public BWTV()
     {
         super();
     }
