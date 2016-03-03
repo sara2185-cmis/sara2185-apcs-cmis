@@ -31,10 +31,11 @@ public class StudentDriver
             for(int col = 0; col < studentBody[0].length; col++)
             {
                 studentBody[row][col] = allStudents.get(i);
+                
                 i++;
             }
         }
-        for(int row = 0; row < studentBody.length; row++)
+         for(int row = 0; row < studentBody.length; row++)
         {
             for(int col = 0; col < studentBody[0].length; col++)
             {
@@ -42,5 +43,6 @@ public class StudentDriver
             }
             System.out.println();
         }
+       
     }
 }
