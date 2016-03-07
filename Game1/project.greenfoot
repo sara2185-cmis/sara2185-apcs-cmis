@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Mar 03 14:37:55 ICT 2016
+#Mon Mar 07 13:44:27 ICT 2016
 target4.type=ClassTarget
 class.Bomb.image=bomb.png
 dependency3.from=Rock
@@ -8,8 +8,8 @@ target3.height=50
 readme.y=10
 dependency3.type=UsesDependency
 readme.x=10
-target4.name=MyWorld
 class.Fish.superclass=greenfoot.Actor
+target4.name=MyWorld
 target4.typeParameters=
 readme.width=47
 editor.fx.0.width=806
