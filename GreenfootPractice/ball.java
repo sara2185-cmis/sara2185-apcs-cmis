@@ -25,13 +25,19 @@ public class ball extends Actor
         {
             turn(120);
         }
-        if(getY() <= 5 || getY() >= getWorld().getHeight() -5)
+        if(getY() <= 5 )
         {
             turn(120);
         }
         if(intersects((Actor)getWorld().getObjects(paddle.class).get(0)))
         {
             turn( 120);
+        }
+        if(getY() >= getWorld().getHeight() -5)
+        {
+            World world; 
+            world = getWorld();
+            world.removeObject(this);
         }
     }
 
@@ -41,6 +47,7 @@ public class ball extends Actor
         Actor brick;
         brick = getOneObjectAtOffset(0, 0, bricks.class);
         Actor cherry;
+        cherry = getOneObjectAtOffset(0, 0, cherry.class);
         int bricksBroken = 0;
         if(brick!= null)
         {
