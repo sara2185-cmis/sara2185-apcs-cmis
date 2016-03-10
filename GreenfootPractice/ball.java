@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ball extends Actor
 {
+    private int bricksBroken = 0;
     /**
      * Act - do whatever the ball wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -46,9 +47,8 @@ public class ball extends Actor
 
         Actor brick;
         brick = getOneObjectAtOffset(0, 0, bricks.class);
-        Actor cherry;
-        cherry = getOneObjectAtOffset(0, 0, cherry.class);
-        int bricksBroken = 0;
+        
+       
         if(brick!= null)
         {
             World world; 
@@ -56,9 +56,11 @@ public class ball extends Actor
             world.removeObject(brick);
             turn(120);
             bricksBroken++;
+            cherry cherry = new cherry();
+     
             if(bricksBroken == 5) 
             {
-                world.addObject(cherry, 0, 0);
+                world.addObject(cherry,(int)(Math.random()*world.getWidth()), 0);
                 bricksBroken = 0;
             }
         }
