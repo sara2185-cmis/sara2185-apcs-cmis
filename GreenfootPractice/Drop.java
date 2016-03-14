@@ -14,12 +14,12 @@ public abstract class Drop extends Actor
      */
     public void act() 
     {
-        turn();
-        move();
+       setRotation(90);
+       move();
         
-    }   
-    public abstract void move();
-    
-    public abstract void turn();
-    
+    } 
+    public void move()
+    {
+    }
+  
 }

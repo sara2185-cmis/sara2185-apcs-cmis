@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
+    private ball ball;
 
     /**
      * Constructor for objects of class MyWorld.
@@ -18,6 +19,7 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         prepare();
+
     }
 
     /**
@@ -48,6 +50,20 @@ public class MyWorld extends World
         bricks bricks20 = new bricks();
         bricks bricks21 = new bricks();
         bricks bricks22 = new bricks();
+        bricks bricks23 = new bricks();
+        bricks bricks24 = new bricks();
+        bricks bricks25 = new bricks();
+        bricks bricks26 = new bricks();
+        bricks bricks27 = new bricks();
+        bricks bricks28 = new bricks();
+        bricks bricks29 = new bricks();
+        bricks bricks30 = new bricks();
+        bricks bricks31 = new bricks();
+        bricks bricks32 = new bricks();
+        bricks bricks33 = new bricks();
+        bricks bricks34 = new bricks();
+        bricks bricks35 = new bricks();
+        bricks bricks36 = new bricks();
         addObject(bricks,24,19);
         addObject(bricks2,56,19);
         addObject(bricks3,88,19);
@@ -67,11 +83,32 @@ public class MyWorld extends World
         addObject(bricks18,506,19);
         addObject(bricks19,539,19);
         addObject(bricks20,570,19);
-        addObject(bricks21,607,19);
-        addObject(bricks22,24,36);
-        ball ball = new ball();
-        addObject(ball,299,253);
+        addObject(bricks21,56,36);
+        addObject(bricks22,88,36);
+        addObject(bricks23,120,36);
+        addObject(bricks24,153,36);
+        addObject(bricks25,184,36);
+        addObject(bricks26,215,36);
+        addObject(bricks27,248,36);
+        addObject(bricks28,280,36);
+        addObject(bricks29,313,36);
+        addObject(bricks30,345,36);
+        addObject(bricks31,377,36);
+        addObject(bricks32,409,36);
+        addObject(bricks33,442,36);
+        addObject(bricks34,474,36);
+        addObject(bricks35,506,36);
+        addObject(bricks36,539,36);
+        ball = new ball();
+        addObject(ball, 298, 253);
+        
         paddle paddle = new paddle();
         addObject(paddle,313,380);
     }
+
+    public ball getBall()
+    {
+        return ball;
+    }
+
 }

@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ball extends Actor
 {
     private int bricksBroken = 0;
+    private int speed = 4;
+    
     /**
      * Act - do whatever the ball wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,10 +20,13 @@ public class ball extends Actor
         moveAndDeflect() ;
         breakBricks();
     }   
-
+    public int getSpeed()
+    {
+        return speed;
+    }
     public void moveAndDeflect()
     {
-        move(4);
+        move(speed);
         if(getX() <= 5 || getX() >= getWorld().getWidth() -5)
         {
             turn(120);
@@ -47,8 +52,7 @@ public class ball extends Actor
 
         Actor brick;
         brick = getOneObjectAtOffset(0, 0, bricks.class);
-        
-       
+
         if(brick!= null)
         {
             World world; 
@@ -57,11 +61,35 @@ public class ball extends Actor
             turn(120);
             bricksBroken++;
             cherry cherry = new cherry();
-     
-            if(bricksBroken == 5) 
+            bomb bomb = new bomb();
+            bomb bomb1 = new bomb();
+            bomb bomb2 = new bomb();
+            bomb bomb3 = new bomb();
+            bomb bomb4 = new bomb();
+            bomb bomb5 = new bomb();
+            bomb bomb6 = new bomb();
+            flower flower = new flower();
+
+            if(bricksBroken == 5 || bricksBroken == 40) 
             {
                 world.addObject(cherry,(int)(Math.random()*world.getWidth()), 0);
-                bricksBroken = 0;
+               
+            }
+            if(bricksBroken == 30)
+            {
+                world.addObject(bomb,(int)(Math.random()*world.getWidth()), 0);
+                world.addObject(bomb1,(int)(Math.random()*world.getWidth()), 0);
+                world.addObject(bomb2,(int)(Math.random()*world.getWidth()), 0);
+                world.addObject(bomb3,(int)(Math.random()*world.getWidth()), 0);
+                world.addObject(bomb4,(int)(Math.random()*world.getWidth()), 0);
+                world.addObject(bomb5,(int)(Math.random()*world.getWidth()), 0);
+                world.addObject(bomb6,(int)(Math.random()*world.getWidth()), 0);
+              
+            }
+            if(bricksBroken == 15)
+            {
+                world.addObject(flower,(int)(Math.random()*world.getWidth()), 0);
+               
             }
         }
 
