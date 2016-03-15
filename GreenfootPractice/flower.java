@@ -40,7 +40,7 @@ public class flower extends Drop implements Disappear, Timed
         {
         }
     }
-    public void timed()
+    public void timed(int seconds)
     {
     }
 

@@ -1,31 +1,15 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import greenfoot.*;  
 public class MyWorld extends World
 {
     private ball ball;
 
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         prepare();
 
     }
 
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
     private void prepare()
     {
         bricks bricks = new bricks();
@@ -99,11 +83,45 @@ public class MyWorld extends World
         addObject(bricks34,474,36);
         addObject(bricks35,506,36);
         addObject(bricks36,539,36);
-        ball = new ball();
+
+        ball ball = new ball();
         addObject(ball, 298, 253);
-        
+
         paddle paddle = new paddle();
         addObject(paddle,313,380);
+
+        cherry cherry = new cherry();
+        if(getBall().getBricksBroken()== 5 || getBall().getBricksBroken() == 40) 
+        {
+             addObject(cherry,(int)(Math.random()*getWidth()), 0);
+
+        }
+        
+        bomb bomb = new bomb();
+        bomb bomb1 = new bomb();
+        bomb bomb2 = new bomb();
+        bomb bomb3 = new bomb();
+        bomb bomb4 = new bomb();
+        bomb bomb5 = new bomb();
+        bomb bomb6 = new bomb();
+        if(getBall().getBricksBroken() == 30)
+        {
+            addObject(bomb,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb1,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb2,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb3,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb4,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb5,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb6,(int)(Math.random()*getWidth()), 0);
+
+        }
+        
+        flower flower = new flower();
+        if(getBall().getBricksBroken() == 15)
+        {
+            addObject(flower,(int)(Math.random()*getWidth()), 0);
+
+        }
     }
 
     public ball getBall()

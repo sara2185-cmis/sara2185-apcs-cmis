@@ -41,7 +41,7 @@ public class bomb extends Drop implements Disappear, Timed
         }
     }
 
-    public void timed()
+    public void timed(int seconds)
     {
     }
 }

@@ -1,20 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
-/**
- * Write a description of class cherry here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class cherry extends Drop implements Disappear, Timed
 {
     private ball ball;
     private MyWorld world = (MyWorld)getWorld();
     private int speed = world.getBall().getSpeed();
-    /**
-     * Act - do whatever the cherry wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act() 
     {
         super.act();
@@ -30,15 +21,14 @@ public class cherry extends Drop implements Disappear, Timed
         move(3);
     }
 
-    public void increaseSpeed(int speed)
+    public void increaseSpeed(int speed)//increases speed a certain amount
     {
-
         this.speed += speed;
-
     }
+
     public void disappear()
     {
-        if(getY() >= getWorld().getHeight() -5)
+        if(getY() >= getWorld().getHeight() -5)//if hits the bottom, cherry disappears
         {
             World world; 
             world = getWorld();
@@ -49,7 +39,7 @@ public class cherry extends Drop implements Disappear, Timed
         }
     }
 
-    public void timed()
+    public void timed(int seconds)
     {
     }
 
