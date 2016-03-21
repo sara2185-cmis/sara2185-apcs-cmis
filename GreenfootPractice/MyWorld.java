@@ -1,53 +1,93 @@
 import greenfoot.*;  
 public class MyWorld extends World
 {
-    private ball ball;
+    private Ball ball;
 
     public MyWorld()
     {    
         super(600, 400, 1); 
         prepare();
+    }
+
+    public void act() 
+    { 
+        Cherry cherry = new Cherry();
+
+        if(getBall().getBricksBroken()== 5 || getBall().getBricksBroken() == 40) 
+        {
+            addObject(cherry,(int)(Math.random()*getWidth()), 0);
+        }
+
+        Paddle paddle = new Paddle();
+        addObject(paddle,313,380);
+
+        Bomb bomb = new Bomb();
+        Bomb bomb1 = new Bomb();
+        Bomb bomb2 = new Bomb();
+        Bomb bomb3 = new Bomb();
+        Bomb bomb4 = new Bomb();
+        Bomb bomb5 = new Bomb();
+        Bomb bomb6 = new Bomb();
+
+        if(getBall().getBricksBroken() == 30)
+        {
+            addObject(bomb,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb1,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb2,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb3,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb4,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb5,(int)(Math.random()*getWidth()), 0);
+            addObject(bomb6,(int)(Math.random()*getWidth()), 0);
+
+        }
+
+        Flower flower = new Flower();
+        if(getBall().getBricksBroken() == 15)
+        {
+            addObject(flower,(int)(Math.random()*getWidth()), 0);
+
+        } 
 
     }
 
     private void prepare()
     {
-        bricks bricks = new bricks();
-        bricks bricks2 = new bricks();
-        bricks bricks3 = new bricks();
-        bricks bricks4 = new bricks();
-        bricks bricks5 = new bricks();
-        bricks bricks6 = new bricks();
-        bricks bricks7 = new bricks();
-        bricks bricks8 = new bricks();
-        bricks bricks9 = new bricks();
-        bricks bricks10 = new bricks();
-        bricks bricks11 = new bricks();
-        bricks bricks12 = new bricks();
-        bricks bricks13 = new bricks();
-        bricks bricks14 = new bricks();
-        bricks bricks15 = new bricks();
-        bricks bricks16 = new bricks();
-        bricks bricks17 = new bricks();
-        bricks bricks18 = new bricks();
-        bricks bricks19 = new bricks();
-        bricks bricks20 = new bricks();
-        bricks bricks21 = new bricks();
-        bricks bricks22 = new bricks();
-        bricks bricks23 = new bricks();
-        bricks bricks24 = new bricks();
-        bricks bricks25 = new bricks();
-        bricks bricks26 = new bricks();
-        bricks bricks27 = new bricks();
-        bricks bricks28 = new bricks();
-        bricks bricks29 = new bricks();
-        bricks bricks30 = new bricks();
-        bricks bricks31 = new bricks();
-        bricks bricks32 = new bricks();
-        bricks bricks33 = new bricks();
-        bricks bricks34 = new bricks();
-        bricks bricks35 = new bricks();
-        bricks bricks36 = new bricks();
+        Bricks bricks = new Bricks();
+        Bricks bricks2 = new Bricks();
+        Bricks bricks3 = new Bricks();
+        Bricks bricks4 = new Bricks();
+        Bricks bricks5 = new Bricks();
+        Bricks bricks6 = new Bricks();
+        Bricks bricks7 = new Bricks();
+        Bricks bricks8 = new Bricks();
+        Bricks bricks9 = new Bricks();
+        Bricks bricks10 = new Bricks();
+        Bricks bricks11 = new Bricks();
+        Bricks bricks12 = new Bricks();
+        Bricks bricks13 = new Bricks();
+        Bricks bricks14 = new Bricks();
+        Bricks bricks15 = new Bricks();
+        Bricks bricks16 = new Bricks();
+        Bricks bricks17 = new Bricks();
+        Bricks bricks18 = new Bricks();
+        Bricks bricks19 = new Bricks();
+        Bricks bricks20 = new Bricks();
+        Bricks bricks21 = new Bricks();
+        Bricks bricks22 = new Bricks();
+        Bricks bricks23 = new Bricks();
+        Bricks bricks24 = new Bricks();
+        Bricks bricks25 = new Bricks();
+        Bricks bricks26 = new Bricks();
+        Bricks bricks27 = new Bricks();
+        Bricks bricks28 = new Bricks();
+        Bricks bricks29 = new Bricks();
+        Bricks bricks30 = new Bricks();
+        Bricks bricks31 = new Bricks();
+        Bricks bricks32 = new Bricks();
+        Bricks bricks33 = new Bricks();
+        Bricks bricks34 = new Bricks();
+        Bricks bricks35 = new Bricks();
+        Bricks bricks36 = new Bricks();
         addObject(bricks,24,19);
         addObject(bricks2,56,19);
         addObject(bricks3,88,19);
@@ -84,47 +124,11 @@ public class MyWorld extends World
         addObject(bricks35,506,36);
         addObject(bricks36,539,36);
 
-        ball ball = new ball();
+        ball = new Ball();
         addObject(ball, 298, 253);
-
-        paddle paddle = new paddle();
-        addObject(paddle,313,380);
-
-        cherry cherry = new cherry();
-        if(getBall().getBricksBroken()== 5 || getBall().getBricksBroken() == 40) 
-        {
-             addObject(cherry,(int)(Math.random()*getWidth()), 0);
-
-        }
-        
-        bomb bomb = new bomb();
-        bomb bomb1 = new bomb();
-        bomb bomb2 = new bomb();
-        bomb bomb3 = new bomb();
-        bomb bomb4 = new bomb();
-        bomb bomb5 = new bomb();
-        bomb bomb6 = new bomb();
-        if(getBall().getBricksBroken() == 30)
-        {
-            addObject(bomb,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb1,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb2,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb3,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb4,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb5,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb6,(int)(Math.random()*getWidth()), 0);
-
-        }
-        
-        flower flower = new flower();
-        if(getBall().getBricksBroken() == 15)
-        {
-            addObject(flower,(int)(Math.random()*getWidth()), 0);
-
-        }
     }
 
-    public ball getBall()
+    public Ball getBall()
     {
         return ball;
     }

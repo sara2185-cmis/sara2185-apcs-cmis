@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Mar 15 11:38:14 ICT 2016
+#Mon Mar 21 12:43:03 ICT 2016
 target4.type=ClassTarget
 target8.showInterface=false
 class.Cherry.image=cherries.png
@@ -52,8 +52,8 @@ target7.typeParameters=
 target1.type=ClassTarget
 target7.y=130
 target7.x=200
-class.rocket.image=rocket.png
 editor.swing.0.width=0
+class.rocket.image=rocket.png
 target7.name=Drop
 editor.swing.0.y=0
 target6.y=130
