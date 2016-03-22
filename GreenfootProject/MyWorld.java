@@ -9,45 +9,7 @@ public class MyWorld extends World
         prepare();
     }
 
-    public void act() 
-    { 
-        Cherry cherry = new Cherry();
-        if(getBall().getBricksBroken()== 5 || getBall().getBricksBroken() == 40) 
-        {
-            addObject(cherry,(int)(Math.random()*getWidth()), 0);
-        }
-
-        Paddle paddle = new Paddle();
-        addObject(paddle,313,380);
-
-        Bomb bomb = new Bomb();
-        Bomb bomb1 = new Bomb();
-        Bomb bomb2 = new Bomb();
-        Bomb bomb3 = new Bomb();
-        Bomb bomb4 = new Bomb();
-        Bomb bomb5 = new Bomb();
-        Bomb bomb6 = new Bomb();
-
-        if(getBall().getBricksBroken() == 30)
-        {
-            addObject(bomb,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb1,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb2,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb3,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb4,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb5,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb6,(int)(Math.random()*getWidth()), 0);
-
-        }
-
-        Flower flower = new Flower();
-        if(getBall().getBricksBroken() == 15)
-        {
-            addObject(flower,(int)(Math.random()*getWidth()), 0);
-
-        } 
-
-    }
+   
 
     private void prepare()
     {
