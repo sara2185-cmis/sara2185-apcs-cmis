@@ -1,5 +1,5 @@
 import greenfoot.*;  
-public class ball extends Actor
+public class Ball extends Actor
 {
     private int bricksBroken = 0;
     private int speed = 4;
@@ -7,7 +7,7 @@ public class ball extends Actor
     public void act() 
     {
         moveAndDeflect() ;
-        breakBricks();
+      
     }   
     public int getSpeed()
     {
@@ -20,7 +20,7 @@ public class ball extends Actor
     public void moveAndDeflect()
     {
         move(speed);
-        if(getX() <= 5 || getX() >= getWorld().getWidth() -5||getY() <= 5||intersects((Actor)getWorld().getObjects(paddle.class).get(0)))
+        if(getX() <= 5 || getX() >= getWorld().getWidth() -5||getY() <= 5||intersects((Actor)getWorld().getObjects(Paddle.class).get(0)))
         {
             turn(120); // turn when meet 3 sides and paddle
         }
@@ -32,10 +32,12 @@ public class ball extends Actor
         }
     }
 
-    public void breakBricks()
+    
+    
+    public void addedToWorld(MyWorld world)
     {
-        Actor brick;
-        brick = getOneObjectAtOffset(0, 0, bricks.class);
+        Bricks brick;
+        brick = getOneObjectAtOffset(0, 0, Bricks.class);
 
         if(brick!= null)//if ball intersects brick, bricksBroken++ and brick is removed
         {
@@ -46,7 +48,6 @@ public class ball extends Actor
             bricksBroken++;
             
         }
-
     }
 }
 

@@ -1,17 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class bomb here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class bomb extends Drop implements Disappear, Timed
+public class Bomb extends Drop implements Disappear, Timed
 {
-    /**
-     * Act - do whatever the bomb wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
     public void act() 
     {
         super.act();
@@ -23,7 +14,7 @@ public class bomb extends Drop implements Disappear, Timed
     }
     public void die()
     {
-        if(intersects((Actor)getWorld().getObjects(paddle.class).get(0)))
+        if(intersects((Actor)getWorld().getObjects(Paddle.class).get(0)))
         {
             
         }

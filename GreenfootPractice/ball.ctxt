@@ -1,13 +1,12 @@
 #BlueJ class context
-comment0.target=ball
+comment0.params=
+comment0.target=void\ act()
 comment1.params=
-comment1.target=void\ act()
+comment1.target=int\ getSpeed()
 comment2.params=
-comment2.target=int\ getSpeed()
+comment2.target=int\ getBricksBroken()
 comment3.params=
-comment3.target=int\ getBricksBroken()
+comment3.target=void\ moveAndDeflect()
 comment4.params=
-comment4.target=void\ moveAndDeflect()
-comment5.params=
-comment5.target=void\ breakBricks()
-numComments=6
+comment4.target=void\ breakBricks()
+numComments=5

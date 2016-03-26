@@ -1,17 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class flower here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class flower extends Drop implements Disappear, Timed
+
+public class Flower extends Drop implements Disappear, Timed
 {
-    /**
-     * Act - do whatever the flower wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+   
     public void act() 
     {
         super.act();
@@ -23,7 +15,7 @@ public class flower extends Drop implements Disappear, Timed
     }
     public void decreasePaddleLength()
     {
-        if(intersects((Actor)getWorld().getObjects(paddle.class).get(0)))
+        if(intersects((Actor)getWorld().getObjects(Paddle.class).get(0)))
         {
 
         }

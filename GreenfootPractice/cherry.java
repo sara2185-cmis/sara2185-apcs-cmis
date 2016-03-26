@@ -1,20 +1,24 @@
 import greenfoot.*; 
 
-public class cherry extends Drop implements Disappear, Timed
+public class Cherry extends Drop implements Disappear, Timed
 {
-    private ball ball;
-    private MyWorld world = (MyWorld)getWorld();
-    private int speed = world.getBall().getSpeed();
-
+    private Ball ball;
+    private int speed;
+   
     public void act() 
     {
         super.act();
-        if(intersects((Actor)getWorld().getObjects(paddle.class).get(0)))
+        if(intersects((Actor)getWorld().getObjects(Paddle.class).get(0)))
         {
             increaseSpeed(2);
         }
         disappear();
     }   
+
+    public void addedToWorld(MyWorld world)
+    {
+        speed = world.getBall().getSpeed();
+    }
 
     public void move()
     {

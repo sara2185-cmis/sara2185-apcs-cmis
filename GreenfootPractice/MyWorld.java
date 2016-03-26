@@ -12,7 +12,7 @@ public class MyWorld extends World
     public void act() 
     { 
         Cherry cherry = new Cherry();
-        if(getBall().getBricksBroken()== 5 || getBall().getBricksBroken() == 40) 
+        if(getBall().getBricksBroken()== 5) 
         {
             addObject(cherry,(int)(Math.random()*getWidth()), 0);
         }

@@ -1,7 +1,8 @@
 #BlueJ class context
-comment0.target=cherry
-comment1.params=
-comment1.target=void\ act()
+comment0.params=
+comment0.target=void\ act()
+comment1.params=world
+comment1.target=void\ addedToWorld(MyWorld)
 comment2.params=
 comment2.target=void\ move()
 comment3.params=speed

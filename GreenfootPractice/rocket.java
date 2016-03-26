@@ -1,6 +1,6 @@
 import greenfoot.*; 
 
-public class rocket extends Enemy
+public class Rocket extends Enemy
 {
     
     public void act() 
