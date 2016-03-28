@@ -9,6 +9,12 @@ public class Ball extends Actor
     {
         moveAndDeflect() ;
         breakBricks();
+        MyWorld world; 
+        world = (MyWorld)getWorld();
+        if(world.getObjects(Bricks.class).size()!=0)
+        {
+            brick = getOneObjectAtOffset(0, 0, Bricks.class);
+        }
     }  
 
     public int getSpeed()
@@ -36,17 +42,12 @@ public class Ball extends Actor
         }
     }
 
-    public void addedToWorld(MyWorld world)
-    {
-        brick = getOneObjectAtOffset(0, 0, Bricks.class);
-    }
-
     public void breakBricks()
     {
         if(brick!= null)//if ball intersects brick, bricksBroken++ and brick is removed
         {
-            World world; 
-            world = getWorld(); 
+            MyWorld world; 
+            world = (MyWorld)getWorld(); 
             world.removeObject(brick);
             turn(120);
             bricksBroken++;

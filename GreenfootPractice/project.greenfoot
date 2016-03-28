@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Mar 26 14:24:04 ICT 2016
+#Mon Mar 28 09:01:48 ICT 2016
 class.Cherry.superclass=Drop
 editor.fx.0.height=700
 target2.width=80
@@ -23,8 +23,8 @@ target4.y=70
 target4.x=160
 class.Cherry.image=cherries.png
 dependency6.type=UsesDependency
-target9.type=AbstractTarget
 target4.showInterface=false
+target9.type=AbstractTarget
 target2.y=10
 target2.x=200
 target10.type=InterfaceTarget
@@ -59,7 +59,7 @@ target9.typeParameters=
 class.Rocket.image=rocket.png
 class.Disappear.superclass=
 target11.type=ClassTarget
-version=2.7.1
+version=2.8.0
 editor.fx.0.y=0
 editor.fx.0.x=0
 class.Bricks.superclass=greenfoot.Actor
@@ -130,8 +130,8 @@ package.numTargets=12
 target12.name=MyWorld
 dependency1.type=UsesDependency
 target4.type=ClassTarget
-target8.width=80
 target12.showInterface=false
+target8.width=80
 target9.width=80
 target7.height=50
 dependency5.type=UsesDependency

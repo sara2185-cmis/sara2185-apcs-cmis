@@ -11,14 +11,11 @@ public class MyWorld extends World
 
     public void act() 
     { 
-        Cherry cherry = new Cherry();
         if(getBall().getBricksBroken()== 5) 
         {
+            Cherry cherry = new Cherry();
             addObject(cherry,(int)(Math.random()*getWidth()), 0);
         }
-
-        Paddle paddle = new Paddle();
-        addObject(paddle,313,380);
 
         Bomb bomb = new Bomb();
         Bomb bomb1 = new Bomb();
@@ -51,7 +48,9 @@ public class MyWorld extends World
 
     private void prepare()
     {
-
+        Paddle paddle = new Paddle();
+        addObject(paddle,313,380);
+        
         Bricks bricks = new Bricks();
         Bricks bricks2 = new Bricks();
         Bricks bricks3 = new Bricks();
