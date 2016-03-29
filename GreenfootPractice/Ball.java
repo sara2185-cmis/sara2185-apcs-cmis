@@ -21,6 +21,11 @@ public class Ball extends Actor
     {
         return speed;
     }
+    
+    public void setSpeed(int newSpeed)
+    {
+        this.speed+= newSpeed;
+    }
 
     public int getBricksBroken()
     {

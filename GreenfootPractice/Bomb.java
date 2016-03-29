@@ -2,33 +2,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Bomb extends Drop implements Disappear, Timed
 {
-   
+    private Paddle paddle;
     public void act() 
     {
         super.act();
         die();
     }    
+
     public void move()
     {
         move(3);
     }
+
     public void die()
     {
-        if(intersects((Actor)getWorld().getObjects(Paddle.class).get(0)))
+        MyWorld world = (MyWorld)getWorld();
+        paddle = world.getPaddle();
+        if(intersects(paddle))
         {
-            
-        }
-    }
-    public void disappear()
-    {
-        if(getY() >= getWorld().getHeight() -5)
-        {
-            World world; 
-            world = getWorld();
-            world.removeObject(this);
-        }
-        else
-        {
+            Greenfoot.stop();
         }
     }
 

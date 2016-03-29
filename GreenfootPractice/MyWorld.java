@@ -2,6 +2,7 @@ import greenfoot.*;
 public class MyWorld extends World
 {
     private Ball ball;
+    private Paddle paddle;
 
     public MyWorld()
     {    
@@ -48,7 +49,7 @@ public class MyWorld extends World
 
     private void prepare()
     {
-        Paddle paddle = new Paddle();
+        paddle = new Paddle();
         addObject(paddle,313,380);
         
         Bricks bricks = new Bricks();
@@ -130,6 +131,10 @@ public class MyWorld extends World
     public Ball getBall()
     {
         return ball;
+    }
+    public Paddle getPaddle()
+    {
+        return paddle;
     }
 
 }

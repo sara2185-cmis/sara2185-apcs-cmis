@@ -23,18 +23,7 @@ public class Flower extends Drop implements Disappear, Timed
 
         }
     }
-    public void disappear()
-    {
-        if(getY() >= getWorld().getHeight() -5)
-        {
-            World world; 
-            world = getWorld();
-            world.removeObject(this);
-        }
-        else
-        {
-        }
-    }
+  
     public void timed(int seconds)
     {
     }
