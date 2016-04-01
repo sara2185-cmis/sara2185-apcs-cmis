@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public abstract class Drop extends Actor implements Disappear
 {
-    private Paddle paddle;
+    private Paddle2 paddle;
     public void act() 
     {
         setRotation(90);

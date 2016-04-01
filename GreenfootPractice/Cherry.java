@@ -5,7 +5,7 @@ public class Cherry extends Drop implements Timed
     private Ball ball;
   
     private int speed;
-    private Paddle paddle;
+    private Paddle2 paddle;
 
     public void act() 
     {

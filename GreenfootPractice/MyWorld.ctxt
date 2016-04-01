@@ -9,5 +9,5 @@ comment3.target=void\ prepare()
 comment4.params=
 comment4.target=Ball\ getBall()
 comment5.params=
-comment5.target=Paddle\ getPaddle()
+comment5.target=Paddle2\ getPaddle()
 numComments=6

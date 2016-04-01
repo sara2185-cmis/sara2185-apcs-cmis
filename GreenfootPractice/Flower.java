@@ -18,7 +18,7 @@ public class Flower extends Drop implements Disappear, Timed
     }
     public void decreasePaddleLength()
     {
-        if(intersects((Actor)getWorld().getObjects(Paddle.class).get(0)))
+        if(intersects((Actor)getWorld().getObjects(Paddle2.class).get(0)))
         {
 
         }
