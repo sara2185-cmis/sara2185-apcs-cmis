@@ -31,11 +31,16 @@ public class Ball extends Actor
     {
         return bricksBroken;
     }
+    
+    public void setBricksBroken(int bricks)
+    {
+         this.bricksBroken = bricks;
+    }
 
     public void moveAndDeflect()
     {
         move(speed);
-        if(getX() <= 5 || getX() >= getWorld().getWidth() -5||getY() <= 5||intersects((Actor)getWorld().getObjects(Paddle2.class).get(0)))
+        if(getX() <= 5 || getX() >= getWorld().getWidth() -5||getY() <= 5||intersects((Actor)getWorld().getObjects(Paddle.class).get(0)))
         {
             turn(120); // turn when meet 3 sides and paddle
         }

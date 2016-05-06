@@ -2,7 +2,7 @@ import greenfoot.*;
 public class MyWorld extends World
 {
     private Ball ball;
-    private Paddle2 paddle;
+    private Paddle paddle;
 
     public MyWorld()
     {    
@@ -12,11 +12,7 @@ public class MyWorld extends World
 
     public void act() 
     { 
-        if(getBall().getBricksBroken()== 5) 
-        {
-            Cherry cherry = new Cherry();
-            addObject(cherry,(int)(Math.random()*getWidth()), 0);
-        }
+        addCherry();
 
         Bomb bomb = new Bomb();
         Bomb bomb1 = new Bomb();
@@ -47,11 +43,22 @@ public class MyWorld extends World
 
     }
 
+    private void addCherry()
+    {
+        if(getBall().getBricksBroken()== 5) 
+        {
+            Cherry cherry = new Cherry();
+            addObject(cherry,(int)(Math.random()*getWidth()), 0);
+            getBall().setBricksBroken(0);
+           
+        }
+    }
+
     private void prepare()
     {
-        paddle = new Paddle2();
+        paddle = new Paddle();
         addObject(paddle,313,380);
-        
+
         Bricks bricks = new Bricks();
         Bricks bricks2 = new Bricks();
         Bricks bricks3 = new Bricks();
@@ -126,13 +133,20 @@ public class MyWorld extends World
 
         ball = new Ball();
         addObject(ball, 298, 253);
+
+        paddle.setLocation(293,371);
+        paddleNormal paddlenormal = new paddleNormal();
+        addObject(paddlenormal,312,359);
+        removeObject(paddle);
+        paddlenormal.setLocation(294,377);
     }
 
     public Ball getBall()
     {
         return ball;
     }
-    public Paddle2 getPaddle()
+
+    public Paddle getPaddle()
     {
         return paddle;
     }

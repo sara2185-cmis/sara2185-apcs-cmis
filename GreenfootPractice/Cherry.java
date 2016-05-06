@@ -3,9 +3,8 @@ import greenfoot.*;
 public class Cherry extends Drop implements Timed
 {
     private Ball ball;
-  
     private int speed;
-    private Paddle2 paddle;
+    private Paddle paddle;
 
     public void act() 
     {
@@ -29,8 +28,8 @@ public class Cherry extends Drop implements Timed
     {
         MyWorld world = (MyWorld)getWorld();
         ball = world.getBall();
-        paddle = world.getPaddle();
-        if(intersects(paddle))
+        
+        if(isTouching(Paddle.class))
         {
             ball.setSpeed(2);
         }

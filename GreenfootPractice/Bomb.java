@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Bomb extends Drop implements Disappear, Timed
 {
-    private Paddle2 paddle;
+    private Paddle paddle;
     public void act() 
     {
         super.act();
