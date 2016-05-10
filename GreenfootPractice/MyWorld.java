@@ -1,4 +1,5 @@
 import greenfoot.*;  
+import java.util.ArrayList;
 public class MyWorld extends World
 {
     private Ball ball;
@@ -17,19 +18,21 @@ public class MyWorld extends World
         addFlower();
 
     }
-    
+
     private void addFlower()
     {
         Flower flower = new Flower();
         if(getBall().getBricksBroken() == 10)
         {
             addObject(flower,(int)(Math.random()*getWidth()), 0);
-             getBall().setBricksBroken(getBall().getBricksBroken()+1);
+            getBall().setBricksBroken(getBall().getBricksBroken()+1);
         } 
     }
 
     private void addBomb()
     {
+
+        
         Bomb bomb = new Bomb();
         Bomb bomb1 = new Bomb();
         Bomb bomb2 = new Bomb();
@@ -37,16 +40,20 @@ public class MyWorld extends World
         Bomb bomb4 = new Bomb();
         Bomb bomb5 = new Bomb();
         Bomb bomb6 = new Bomb();
+        ArrayList<Bomb> bombs = new ArrayList<Bomb>();
+        bombs.add(bomb1);
+        bombs.add(bomb2);
+        bombs.add(bomb3);
+        bombs.add(bomb4);
+        bombs.add(bomb5);
+        bombs.add(bomb6);
 
         if(getBall().getBricksBroken() == 15)
         {
-            addObject(bomb,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb1,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb2,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb3,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb4,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb5,(int)(Math.random()*getWidth()), 0);
-            addObject(bomb6,(int)(Math.random()*getWidth()), 0);
+            for(int i = 0; i < 6; i ++)
+            {
+                addObject(bombs.get(i),(int)(Math.random()*getWidth()), 0);
+            }
             getBall().setBricksBroken(getBall().getBricksBroken()+1);
         }
     }
@@ -58,7 +65,6 @@ public class MyWorld extends World
             Cherry cherry = new Cherry();
             addObject(cherry,(int)(Math.random()*getWidth()), 0);
             getBall().setBricksBroken(getBall().getBricksBroken()+1);
-           
 
         }
     }

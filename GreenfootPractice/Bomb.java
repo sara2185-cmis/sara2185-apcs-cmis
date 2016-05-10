@@ -17,10 +17,13 @@ public class Bomb extends Drop implements Timed
     public void die()
     {
         MyWorld world = (MyWorld)getWorld();
-        paddle = world.getPaddle();
-        if(intersects(paddle))
+        if(world != null)
         {
-            Greenfoot.stop();
+            paddle = world.getPaddle();
+            if(intersects(paddle))
+            {
+                Greenfoot.stop();
+            }
         }
     }
 
@@ -28,7 +31,7 @@ public class Bomb extends Drop implements Timed
     {
         super.disappear();
     }
-    
+
     public void timed(int seconds)
     {
     }

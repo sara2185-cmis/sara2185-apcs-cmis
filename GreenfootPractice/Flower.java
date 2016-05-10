@@ -16,21 +16,23 @@ public class Flower extends Drop implements Timed
 
     public void decreasePaddleLength()
     {
-        if(isTouching(Paddle.class))
+        MyWorld world = (MyWorld)getWorld();
+        if(world != null)
         {
-            MyWorld world = (MyWorld)getWorld();
-            paddle = world.getPaddle();
-            getWorld().removeObject(paddle);
-            getWorld().addObject(new PaddleSmall(), this.getX(), this.getY()+28);
-
-        } 
+            if(isTouching(Paddle.class))
+            {
+                paddle = world.getPaddle();
+                getWorld().removeObject(paddle);
+                getWorld().addObject(new PaddleSmall(), this.getX(), this.getY()+28);
+            } 
+        }
     }
 
     public void disappear()
     {
         super.disappear();
     }
-    
+
     public void timed(int seconds)
     {
     }
