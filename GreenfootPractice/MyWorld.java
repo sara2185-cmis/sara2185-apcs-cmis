@@ -13,7 +13,23 @@ public class MyWorld extends World
     public void act() 
     { 
         addCherry();
+        addBomb();
+        addFlower();
 
+    }
+    
+    private void addFlower()
+    {
+        Flower flower = new Flower();
+        if(getBall().getBricksBroken() == 10)
+        {
+            addObject(flower,(int)(Math.random()*getWidth()), 0);
+             getBall().setBricksBroken(getBall().getBricksBroken()+1);
+        } 
+    }
+
+    private void addBomb()
+    {
         Bomb bomb = new Bomb();
         Bomb bomb1 = new Bomb();
         Bomb bomb2 = new Bomb();
@@ -22,7 +38,7 @@ public class MyWorld extends World
         Bomb bomb5 = new Bomb();
         Bomb bomb6 = new Bomb();
 
-        if(getBall().getBricksBroken() == 30)
+        if(getBall().getBricksBroken() == 15)
         {
             addObject(bomb,(int)(Math.random()*getWidth()), 0);
             addObject(bomb1,(int)(Math.random()*getWidth()), 0);
@@ -31,16 +47,8 @@ public class MyWorld extends World
             addObject(bomb4,(int)(Math.random()*getWidth()), 0);
             addObject(bomb5,(int)(Math.random()*getWidth()), 0);
             addObject(bomb6,(int)(Math.random()*getWidth()), 0);
-            getBall().setBricksBroken(0);
+            getBall().setBricksBroken(getBall().getBricksBroken()+1);
         }
-
-        Flower flower = new Flower();
-        if(getBall().getBricksBroken() == 2)
-        {
-            addObject(flower,(int)(Math.random()*getWidth()), 0);
-            getBall().setBricksBroken(0);
-        } 
-
     }
 
     private void addCherry()
@@ -49,8 +57,9 @@ public class MyWorld extends World
         {
             Cherry cherry = new Cherry();
             addObject(cherry,(int)(Math.random()*getWidth()), 0);
-            getBall().setBricksBroken(0);
+            getBall().setBricksBroken(getBall().getBricksBroken()+1);
            
+
         }
     }
 
@@ -134,7 +143,6 @@ public class MyWorld extends World
         ball = new Ball();
         addObject(ball, 298, 253);
 
-        
     }
 
     public Ball getBall()

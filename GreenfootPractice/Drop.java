@@ -10,19 +10,18 @@ public abstract class Drop extends Actor implements Disappear
         disappear();
     } 
 
-    public void move()
-    {
-    }
+    public abstract void move();
 
     public void disappear()
     {
         MyWorld world = (MyWorld)getWorld();
         paddle = world.getPaddle();
-        if(isTouching(Paddle.class))
+        if(isTouching(Paddle.class)||(getY() >= world.getHeight() -5))
         {
             world.removeObject(this);
         }
-        // if(getY() >= world.getHeight() -15||intersects(paddle))//if hits the bottom, cherry disappears
+        
+        // if(getY() >= world.getHeight() -5||intersects(paddle))//if hits the bottom, cherry disappears
         // {
         //     world.removeObject(this);
         // }

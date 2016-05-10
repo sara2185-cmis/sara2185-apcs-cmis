@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Bomb extends Drop implements Disappear, Timed
+public class Bomb extends Drop implements Timed
 {
     private Paddle paddle;
     public void act() 
@@ -11,7 +11,7 @@ public class Bomb extends Drop implements Disappear, Timed
 
     public void move()
     {
-        move(3);
+        move(2);
     }
 
     public void die()
@@ -24,6 +24,11 @@ public class Bomb extends Drop implements Disappear, Timed
         }
     }
 
+    public void disappear()
+    {
+        super.disappear();
+    }
+    
     public void timed(int seconds)
     {
     }

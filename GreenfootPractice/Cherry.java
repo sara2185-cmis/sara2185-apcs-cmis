@@ -10,13 +10,11 @@ public class Cherry extends Drop implements Timed
     {
         super.act();
         increaseSpeed();
-        disappear();
-
     }  
 
     public void addedToWorld(MyWorld world)
     {
-
+       
     }
 
     public void move()
@@ -34,7 +32,11 @@ public class Cherry extends Drop implements Timed
             ball.setSpeed(2);
         }
     }
-
+    
+     public void disappear()
+    {
+        super.disappear();
+    }
     
 
     public void timed(int seconds)
