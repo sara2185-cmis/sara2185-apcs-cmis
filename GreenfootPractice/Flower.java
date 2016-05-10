@@ -1,6 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
 public class Flower extends Drop implements Disappear, Timed
 {
     /**
@@ -9,24 +8,31 @@ public class Flower extends Drop implements Disappear, Timed
      */
     public void act() 
     {
+        if(isAtEdge())
+        {
+            getWorld().removeObject(this);
+        }
         super.act();
         decreasePaddleLength();
     }  
+
     public void move()
     {
         move(3);
     }
+
     public void decreasePaddleLength()
     {
-        if(isTouching(Flower.class))
+        if(isTouching(Paddle.class))
         {
-            Actor actor = getOneIntersectingObject(Flower.class);
-            getWorld().removeObject(actor);
-            getWorld().addObject(new PaddleSmall(), getX(), getY());
-            getWorld().removeObject(this);
-        }
+            MyWorld world = (MyWorld)getWorld();
+            Paddle paddle = world.getPaddle();
+            getWorld().removeObject(paddle);
+            getWorld().addObject(new PaddleSmall(), this.getX(), this.getY()+28);
+
+        } 
     }
-  
+
     public void timed(int seconds)
     {
     }

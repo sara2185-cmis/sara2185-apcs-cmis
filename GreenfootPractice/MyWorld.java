@@ -31,14 +31,14 @@ public class MyWorld extends World
             addObject(bomb4,(int)(Math.random()*getWidth()), 0);
             addObject(bomb5,(int)(Math.random()*getWidth()), 0);
             addObject(bomb6,(int)(Math.random()*getWidth()), 0);
-
+            getBall().setBricksBroken(0);
         }
 
         Flower flower = new Flower();
-        if(getBall().getBricksBroken() == 15)
+        if(getBall().getBricksBroken() == 2)
         {
             addObject(flower,(int)(Math.random()*getWidth()), 0);
-
+            getBall().setBricksBroken(0);
         } 
 
     }
@@ -56,7 +56,7 @@ public class MyWorld extends World
 
     private void prepare()
     {
-        paddle = new Paddle();
+        paddle = new PaddleNormal();
         addObject(paddle,313,380);
 
         Bricks bricks = new Bricks();
@@ -134,11 +134,7 @@ public class MyWorld extends World
         ball = new Ball();
         addObject(ball, 298, 253);
 
-        paddle.setLocation(293,371);
-        paddleNormal paddlenormal = new paddleNormal();
-        addObject(paddlenormal,312,359);
-        removeObject(paddle);
-        paddlenormal.setLocation(294,377);
+        
     }
 
     public Ball getBall()

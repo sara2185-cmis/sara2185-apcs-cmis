@@ -42,7 +42,8 @@ public class Ball extends Actor
         move(speed);
         if(getX() <= 5 || getX() >= getWorld().getWidth() -5||getY() <= 5||intersects((Actor)getWorld().getObjects(Paddle.class).get(0)))
         {
-            turn(120); // turn when meet 3 sides and paddle
+            int degrees = 120 + ((int)(Math.random()));
+            turn(degrees); // turn when meet 3 sides and paddle
         }
         if(getY() >= getWorld().getHeight() -5) //removes ball when ball hits bottom
         {
