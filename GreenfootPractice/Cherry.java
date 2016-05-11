@@ -2,15 +2,14 @@ import greenfoot.*;
 
 public class Cherry extends Drop implements Timed
 {
-    private Ball ball;
-    private int speed;
+    //private Ball ball;
     private Paddle paddle;
 
     public void act() 
     {
+         increaseSpeed();
         super.act();
-
-        increaseSpeed();
+       
     }  
 
     public void addedToWorld(MyWorld world)
@@ -26,12 +25,15 @@ public class Cherry extends Drop implements Timed
     public void increaseSpeed()//increases speed a certain amount
     {
         MyWorld world = (MyWorld)getWorld();
+        
         if(world != null)
         {
-            ball = world.getBall();
-            if(isTouching(Paddle.class))
+            
+            Ball ball = world.getBall();
+            paddle = world.getPaddle();
+            if(intersects(paddle))
             {
-                ball.setSpeed(2);
+                ball.setSpeed(100);
             }
         }
 

@@ -24,6 +24,7 @@ public class Ball extends Actor
     
     public void setSpeed(int newSpeed)
     {
+        System.out.println("--");
         this.speed+= newSpeed;
     }
 
