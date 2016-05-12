@@ -15,6 +15,7 @@ public class Ball extends Actor
         {
             brick = getOneObjectAtOffset(0, 0, Bricks.class);
         }
+        
     }  
 
     public int getSpeed()
@@ -24,7 +25,6 @@ public class Ball extends Actor
     
     public void setSpeed(int newSpeed)
     {
-        System.out.println("--");
         this.speed+= newSpeed;
     }
 

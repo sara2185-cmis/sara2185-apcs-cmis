@@ -33,7 +33,7 @@ public class Cherry extends Drop implements Timed
             paddle = world.getPaddle();
             if(intersects(paddle))
             {
-                ball.setSpeed(100);
+                ball.setSpeed(2);
             }
         }
 

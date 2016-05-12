@@ -15,13 +15,6 @@ public class PaddleSmall extends Paddle
     public void act() 
     {
        
-        if (Greenfoot.isKeyDown("left"))
-        {
-            move(-4);
-        }
-        if (Greenfoot.isKeyDown("right"))
-        {
-            move(4);
-        }// Add your action code here.
+        super.act();
     }    
 }

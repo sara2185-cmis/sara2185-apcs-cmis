@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cactus extends Drop
 {
-     private Paddle paddle;
+    private Paddle paddle;
     public void act() 
     {
         super.act();
@@ -22,21 +22,25 @@ public class Cactus extends Drop
 
     public void decreasePaddleLength()
     {
-        if(isTouching(Paddle.class))
+        MyWorld world = (MyWorld)getWorld();
+        if(world != null)
         {
-            MyWorld world = (MyWorld)getWorld();
-            paddle = world.getPaddle();
-            getWorld().removeObject(paddle);
-            getWorld().addObject(new PaddleBig(), this.getX(), this.getY()+28);
+            if(isTouching(Paddle.class))
+            {
 
-        } 
+                paddle = world.getPaddle();
+                getWorld().removeObject(paddle);
+                getWorld().addObject(new PaddleBig(), this.getX(), this.getY()+28);
+
+            } 
+        }
     }
 
     public void disappear()
     {
         super.disappear();
     }
-    
+
     public void timed(int seconds)
     {
     }

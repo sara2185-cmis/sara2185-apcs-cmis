@@ -14,6 +14,6 @@ public class PaddleBig extends Paddle
      */
     public void act() 
     {
-        // Add your action code here.
+       super.act();
     }    
 }

@@ -28,6 +28,16 @@ public class MyWorld extends World
             getBall().setBricksBroken(getBall().getBricksBroken()+1);
         } 
     }
+    
+     private void addCactus()
+    {
+        Flower flower = new Flower();
+        if(getBall().getBricksBroken() == 17)
+        {
+            addObject(flower,(int)(Math.random()*getWidth()), 0);
+            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+        } 
+    }
 
     private void addBomb()
     {
