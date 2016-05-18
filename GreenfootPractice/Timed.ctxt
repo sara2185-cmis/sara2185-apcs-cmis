@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Timed
 comment0.text=\n\ Write\ a\ description\ of\ class\ Timed\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=seconds
-comment1.target=void\ timed(int)
+comment1.params=
+comment1.target=void\ timed()
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ Timed\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 numComments=2

@@ -30,7 +30,7 @@ public class Cactus extends Drop
 
                 paddle = world.getPaddle();
                 getWorld().removeObject(paddle);
-                getWorld().addObject(new PaddleBig(), this.getX(), this.getY()+28);
+                getWorld().addObject(new PaddleBig(), this.getX(), this.getY());
 
             } 
         }

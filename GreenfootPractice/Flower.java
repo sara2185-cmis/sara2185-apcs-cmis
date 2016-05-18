@@ -33,7 +33,7 @@ public class Flower extends Drop implements Timed
         super.disappear();
     }
 
-    public void timed(int seconds)
+    public void timed()
     {
     }
 

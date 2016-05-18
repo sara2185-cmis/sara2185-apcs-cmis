@@ -13,5 +13,5 @@ public interface Timed
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    public void timed(int seconds);
+    public void timed();
 }

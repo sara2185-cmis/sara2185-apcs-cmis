@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon May 16 09:17:38 ICT 2016
+#Wed May 18 08:04:46 ICT 2016
 class.Cherry.superclass=Drop
 editor.fx.0.height=700
 target2.width=80
@@ -141,8 +141,8 @@ target9.height=50
 target16.width=80
 target12.y=130
 target12.x=10
-class.World2.superclass=greenfoot.World
 dependency10.type=UsesDependency
+class.World2.superclass=greenfoot.World
 editor.fx.0.width=700
 target11.showInterface=false
 dependency20.type=UsesDependency
