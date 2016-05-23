@@ -12,7 +12,7 @@ public class Cactus extends Drop
     public void act() 
     {
         super.act();
-        decreasePaddleLength();
+        //decreasePaddleLength();
     }  
 
     public void move()
@@ -20,7 +20,13 @@ public class Cactus extends Drop
         move(3);
     }
 
-    public void decreasePaddleLength()
+   
+    public void disappear()
+    {
+        super.disappear();
+    }
+/*
+     public void decreasePaddleLength()
     {
         MyWorld world = (MyWorld)getWorld();
         if(world != null)
@@ -35,13 +41,8 @@ public class Cactus extends Drop
             } 
         }
     }
+    /*
+     * 
+     */
 
-    public void disappear()
-    {
-        super.disappear();
-    }
-
-    public void timed(int seconds)
-    {
-    }
 }

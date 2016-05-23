@@ -1,9 +1,11 @@
 import greenfoot.*;  
-public class Ball extends Actor
+public class Ball extends Actor implements Change
 {
+
     private int bricksBroken = 0;
     private int speed = 4;
     private Actor brick;
+    private int time = 30;
 
     public void act() 
     {
@@ -15,14 +17,16 @@ public class Ball extends Actor
         {
             brick = getOneObjectAtOffset(0, 0, Bricks.class);
         }
-        
+        timed();
+        changeSmall();
+        changeBig();
     }  
 
     public int getSpeed()
     {
         return speed;
     }
-    
+
     public void setSpeed(int newSpeed)
     {
         this.speed+= newSpeed;
@@ -32,10 +36,10 @@ public class Ball extends Actor
     {
         return bricksBroken;
     }
-    
+
     public void setBricksBroken(int bricks)
     {
-         this.bricksBroken = bricks;
+        this.bricksBroken = bricks;
     }
 
     public void moveAndDeflect()
@@ -65,5 +69,29 @@ public class Ball extends Actor
             bricksBroken++;
         }
     }
+
+    public void timed()
+    {
+        if(isTouching(Cherry.class))
+        {
+            if(time!=0)
+            {
+                time--;
+            }
+            if(time == 0)
+            {
+                setSpeed(-2);
+            }
+        }
+
+    }
+    
+    public void changeSmall()
+    {
+    }
+     public void changeBig()
+    {
+    }
+    
 }
 

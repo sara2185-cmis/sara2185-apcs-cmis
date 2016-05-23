@@ -156,7 +156,7 @@ public class MyWorld extends World
         addObject(bricks35,506,36);
         addObject(bricks36,539,36);
 
-        ball = new Ball();
+        ball = new ballNormal();
         addObject(ball, 298, 253);
 
     }
