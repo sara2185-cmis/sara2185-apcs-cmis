@@ -7,6 +7,7 @@ public class Flower extends Drop implements Timed
     {
         super.act();
         decreasePaddleLength();
+        disappear();
     }  
 
     public void move()
@@ -28,9 +29,15 @@ public class Flower extends Drop implements Timed
         }
     }
 
-    public void disappear()
+     public void disappear()
     {
-        super.disappear();
+        MyWorld world = (MyWorld)getWorld();
+        paddle = world.getPaddle();
+        if(isTouching(Paddle.class)||(getY() >= world.getHeight() -5))
+        {
+            world.removeObject(this);
+        }
+        
     }
 
     public void timed()

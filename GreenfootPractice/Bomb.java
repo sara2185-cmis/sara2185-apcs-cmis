@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Bomb extends Drop implements Timed
+public class Bomb extends Drop implements Timed, Disappear
 {
     private Paddle paddle;
     public void act() 
@@ -29,9 +29,14 @@ public class Bomb extends Drop implements Timed
 
     public void disappear()
     {
-        super.disappear();
+        MyWorld world = (MyWorld)getWorld();
+        paddle = world.getPaddle();
+        if(isTouching(Paddle.class)||(getY() >= world.getHeight() -5))
+        {
+            world.removeObject(this);
+        }
+     
     }
-
     public void timed()
     {
     }

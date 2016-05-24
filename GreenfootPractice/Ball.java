@@ -1,4 +1,5 @@
 import greenfoot.*;  
+import java.awt.Color;
 public class Ball extends Actor implements Change
 {
 
@@ -20,6 +21,7 @@ public class Ball extends Actor implements Change
         timed();
         changeSmall();
         changeBig();
+
     }  
 
     public int getSpeed()
@@ -85,13 +87,44 @@ public class Ball extends Actor implements Change
         }
 
     }
-    
+
+    public void changeBig()
+    {
+        MyWorld world = (MyWorld)getWorld();
+        if(world!=null)
+        {
+            if(isTouching(Pumpkin.class))
+            {
+
+                int   x= this.getX();
+                int  y=this.getY();
+                world.removeObject(this);
+
+                world.addObject(new ballBig(), x, y);
+            }
+
+        }
+    }
+
     public void changeSmall()
     {
+        MyWorld world = (MyWorld)getWorld();
+        if(world!=null)
+        {
+            if(isTouching(Grapes.class))
+            {
+
+                int   x= this.getX();
+                int  y=this.getY();
+                world.removeObject(this);
+
+                world.addObject(new ballSmall(), x, y);
+            }
+
+        }
     }
-     public void changeBig()
-    {
-    }
-    
+
+   
+
 }
 

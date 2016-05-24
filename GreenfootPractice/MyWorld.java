@@ -16,25 +16,47 @@ public class MyWorld extends World
         addCherry();
         addBomb();
         addFlower();
-
+        addPumpkin();
+        addGrapes();
+        
     }
 
     private void addFlower()
     {
         Flower flower = new Flower();
-        if(getBall().getBricksBroken() == 10)
+        if(getBall().getBricksBroken() == 12)
         {
             addObject(flower,(int)(Math.random()*getWidth()), 0);
             getBall().setBricksBroken(getBall().getBricksBroken()+1);
         } 
     }
-    
-     private void addCactus()
+
+    private void addPumpkin()
     {
-        Flower flower = new Flower();
+        Pumpkin pumpkin = new Pumpkin();
+        if(getBall().getBricksBroken() == 7)
+        {
+            addObject(pumpkin,(int)(Math.random()*getWidth()), 0);
+            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+        } 
+    }
+
+    private void addGrapes()
+    {
+        Grapes grapes = new Grapes();
         if(getBall().getBricksBroken() == 17)
         {
-            addObject(flower,(int)(Math.random()*getWidth()), 0);
+            addObject(grapes,(int)(Math.random()*getWidth()), 0);
+            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+        } 
+    }
+
+    private void addCactus()
+    {
+        Cactus cactus = new Cactus();
+        if(getBall().getBricksBroken() == 21)
+        {
+            addObject(cactus,(int)(Math.random()*getWidth()), 0);
             getBall().setBricksBroken(getBall().getBricksBroken()+1);
         } 
     }
@@ -42,7 +64,6 @@ public class MyWorld extends World
     private void addBomb()
     {
 
-        
         Bomb bomb = new Bomb();
         Bomb bomb1 = new Bomb();
         Bomb bomb2 = new Bomb();

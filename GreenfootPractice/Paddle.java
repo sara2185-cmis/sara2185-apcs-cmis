@@ -18,23 +18,40 @@ public class Paddle extends Actor implements Change
         changeBig();
     }    
 
-    public void changeSmall()
+    public void changeBig()
     {
         MyWorld world = (MyWorld)getWorld();
-        if(world != null)
+        if(world!=null)
         {
             if(isTouching(Cactus.class))
             {
 
-                Paddle paddle = world.getPaddle();
-                getWorld().removeObject(paddle);
-                getWorld().addObject(new PaddleBig(), this.getX(), this.getY());
+                int   x= this.getX();
+                int  y=this.getY();
+                world.removeObject(this);
+
+                world.addObject(new PaddleBig(), x, y);
             }
-        }	
+
+        }
     }
 
-    public void changeBig()
+    public void changeSmall()
     {
+        MyWorld world = (MyWorld)getWorld();
+        if(world!=null)
+        {
+            if(isTouching(Flower.class))
+            {
+
+                int   x= this.getX();
+                int  y=this.getY();
+                world.removeObject(this);
+
+                world.addObject(new PaddleSmall(), x, y);
+            }
+
+        }
     }
 
 }

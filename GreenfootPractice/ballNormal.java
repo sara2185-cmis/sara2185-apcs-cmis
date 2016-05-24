@@ -14,6 +14,6 @@ public class ballNormal extends Ball
      */
     public void act() 
     {
-        // Add your action code here.
+       super.act();
     }    
 }
