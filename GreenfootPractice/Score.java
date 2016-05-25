@@ -8,7 +8,7 @@ public class Score extends Actor
     {
         MyWorld world = (MyWorld)getWorld();
         ball = world.getBall();
-        if(ball.getBricksBroken() > 0)
+        if(ball.getBricksBroken() >= 0)
         {
             setImage(new GreenfootImage("Score: " + ball.getBricksBroken(), 24, Color.GREEN, Color.BLACK));
         }

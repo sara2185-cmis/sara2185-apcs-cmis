@@ -6,8 +6,7 @@ public abstract class Drop extends Actor
     public void act() 
     {
         setRotation(90);
-        
-         move();
+        move();
     } 
 
     public abstract void move();

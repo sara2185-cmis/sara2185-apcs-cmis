@@ -57,6 +57,9 @@ public class Ball extends Actor implements Change
             World world; 
             world = getWorld();
             world.removeObject(this);
+            GameOver gameover= new GameOver();
+            world.addObject(gameover, world.getWidth()/2, world.getHeight()/2);
+            Greenfoot.stop();
         }
     }
 
@@ -95,11 +98,12 @@ public class Ball extends Actor implements Change
         {
             if(isTouching(Pumpkin.class))
             {
-
+                Pumpkin pumpkin = world.getObjects(Pumpkin.class).get(0);
+                Ball ball = world.getBall();
                 int   x= this.getX();
                 int  y=this.getY();
-                world.removeObject(this);
-
+                world.removeObject(pumpkin);
+                world.removeObject(ball);
                 world.addObject(new ballBig(), x, y);
             }
 
@@ -113,18 +117,16 @@ public class Ball extends Actor implements Change
         {
             if(isTouching(Grapes.class))
             {
-
+                Grapes grapes = world.getObjects(Grapes.class).get(0);
+                Ball ball = world.getBall();
                 int   x= this.getX();
                 int  y=this.getY();
-                world.removeObject(this);
-
+                world.removeObject(grapes);
+                world.removeObject(ball);
                 world.addObject(new ballSmall(), x, y);
             }
 
         }
     }
 
-   
-
 }
-

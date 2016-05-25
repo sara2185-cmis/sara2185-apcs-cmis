@@ -179,6 +179,9 @@ public class MyWorld extends World
 
         ball = new ballNormal();
         addObject(ball, 298, 253);
+        
+        Score score = new Score();
+        addObject(score, 51, 10);
 
     }
 
