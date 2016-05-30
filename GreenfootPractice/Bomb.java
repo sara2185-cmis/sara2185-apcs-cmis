@@ -22,6 +22,8 @@ public class Bomb extends Drop implements Timed, Disappear
             paddle = world.getPaddle();
             if(intersects(paddle))
             {
+                GameOver gameover= new GameOver();
+                world.addObject(gameover, world.getWidth()/2, world.getHeight()/2);
                 Greenfoot.stop();
             }
         }
@@ -35,8 +37,9 @@ public class Bomb extends Drop implements Timed, Disappear
         {
             world.removeObject(this);
         }
-     
+
     }
+
     public void timed()
     {
     }

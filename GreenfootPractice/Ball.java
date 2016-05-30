@@ -103,8 +103,8 @@ public class Ball extends Actor implements Change
                 int   x= this.getX();
                 int  y=this.getY();
                 world.removeObject(pumpkin);
-                world.removeObject(ball);
-                world.addObject(new ballBig(), x, y);
+                
+                world.setBigBall();
             }
 
         }
@@ -122,8 +122,8 @@ public class Ball extends Actor implements Change
                 int   x= this.getX();
                 int  y=this.getY();
                 world.removeObject(grapes);
-                world.removeObject(ball);
-                world.addObject(new ballSmall(), x, y);
+            
+                world.setSmallBall();
             }
 
         }

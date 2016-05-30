@@ -2,9 +2,8 @@ import greenfoot.*;
 import java.util.ArrayList;
 public class MyWorld extends World
 {
-    private Ball ball;
     private Paddle paddle;
-
+    private ArrayList<Ball> ball= new ArrayList<Ball>();
     public MyWorld()
     {    
         super(600, 400, 1); 
@@ -18,7 +17,7 @@ public class MyWorld extends World
         addFlower();
         addPumpkin();
         addGrapes();
-        
+
     }
 
     private void addFlower()
@@ -69,19 +68,15 @@ public class MyWorld extends World
         Bomb bomb2 = new Bomb();
         Bomb bomb3 = new Bomb();
         Bomb bomb4 = new Bomb();
-        Bomb bomb5 = new Bomb();
-        Bomb bomb6 = new Bomb();
         ArrayList<Bomb> bombs = new ArrayList<Bomb>();
         bombs.add(bomb1);
         bombs.add(bomb2);
         bombs.add(bomb3);
         bombs.add(bomb4);
-        bombs.add(bomb5);
-        bombs.add(bomb6);
 
         if(getBall().getBricksBroken() == 15)
         {
-            for(int i = 0; i < 6; i ++)
+            for(int i = 0; i < 4; i ++)
             {
                 addObject(bombs.get(i),(int)(Math.random()*getWidth()), 0);
             }
@@ -177,9 +172,9 @@ public class MyWorld extends World
         addObject(bricks35,506,36);
         addObject(bricks36,539,36);
 
-        ball = new ballNormal();
-        addObject(ball, 298, 253);
-        
+        ball.add(new ballNormal());
+        addObject(ball.get(0), 298, 253);
+
         Score score = new Score();
         addObject(score, 51, 10);
 
@@ -187,7 +182,27 @@ public class MyWorld extends World
 
     public Ball getBall()
     {
-        return ball;
+        return ball.get(0);
+    }
+
+    public void setSmallBall()
+    {
+        int  x= ball.get(0).getX();
+        int  y=ball.get(0).getY();
+        removeObject(ball.get(0));
+        ball.remove(0);
+        ball.add(new ballSmall());
+        addObject(ball.get(0), x,y);
+    }
+
+    public void setBigBall()
+    {
+        int  x= ball.get(0).getX();
+        int  y=ball.get(0).getY();
+        removeObject(ball.get(0));
+        ball.remove(0);
+        ball.add(new ballBig());
+        addObject(ball.get(0), x,y);
     }
 
     public Paddle getPaddle()
