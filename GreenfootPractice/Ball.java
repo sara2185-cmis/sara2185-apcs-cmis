@@ -47,15 +47,16 @@ public class Ball extends Actor implements Change
     public void moveAndDeflect()
     {
         move(speed);
-        if(getX() <= 5 || getX() >= getWorld().getWidth() -5||getY() <= 5||intersects((Actor)getWorld().getObjects(Paddle.class).get(0)))
+        MyWorld world = (MyWorld)getWorld();
+        if(getX() <= 5 || getX() >= getWorld().getWidth() -5||getY() <= 5||intersects((Actor)getWorld().getObjects(Paddle.class).get(0)))//||intersects((Actor)getWorld().getObjects(Rocket.class).get(0))||intersects((Actor)getWorld().getObjects(Car.class).get(0)) )
         {
             int degrees = 120 + ((int)(Math.random()));
             turn(degrees); // turn when meet 3 sides and paddle
         }
+       
         if(getY() >= getWorld().getHeight() -5) //removes ball when ball hits bottom
         {
-            World world; 
-            world = getWorld();
+
             world.removeObject(this);
             GameOver gameover= new GameOver();
             world.addObject(gameover, world.getWidth()/2, world.getHeight()/2);
@@ -79,7 +80,7 @@ public class Ball extends Actor implements Change
     {
         if(isTouching(Cherry.class))
         {
-            if(time!=0)
+            while(time!=0)
             {
                 time--;
             }
@@ -103,7 +104,6 @@ public class Ball extends Actor implements Change
                 int   x= this.getX();
                 int  y=this.getY();
                 world.removeObject(pumpkin);
-                
                 world.setBigBall();
             }
 
@@ -122,7 +122,7 @@ public class Ball extends Actor implements Change
                 int   x= this.getX();
                 int  y=this.getY();
                 world.removeObject(grapes);
-            
+
                 world.setSmallBall();
             }
 

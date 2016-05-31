@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class MyWorld extends World
 {
     private Paddle paddle;
-    private ArrayList<Ball> ball= new ArrayList<Ball>();
+    private Ball ball= new Ball();
     public MyWorld()
     {    
         super(600, 400, 1); 
@@ -17,6 +17,9 @@ public class MyWorld extends World
         addFlower();
         addPumpkin();
         addGrapes();
+        addRocket();
+        addCar();
+        addHearts();
 
     }
 
@@ -81,7 +84,44 @@ public class MyWorld extends World
                 addObject(bombs.get(i),(int)(Math.random()*getWidth()), 0);
             }
             getBall().setBricksBroken(getBall().getBricksBroken()+1);
+
         }
+    }
+
+    private void addHearts()
+    {
+        Hearts heart = new Hearts();
+        Hearts heart1 = new Hearts();
+        Hearts heart2 = new Hearts();
+        Hearts heart3 = new Hearts();
+        Hearts heart4 = new Hearts();
+        Hearts heart5 = new Hearts();
+        Hearts heart6 = new Hearts();
+        ArrayList<Hearts> hearts = new ArrayList<Hearts>();
+        hearts.add(heart1);
+        hearts.add(heart2);
+        hearts.add(heart3);
+        hearts.add(heart4);
+        hearts.add(heart5);
+        hearts.add(heart6);
+
+        if(getBall().getBricksBroken() == 8)
+        {
+            int i = 0;
+            int total = 0;
+            while(i < 6)
+            {
+                addObject(hearts.get(i),(int)(Math.random()*getWidth()), 0);
+                i++;
+            }
+            
+            /*for(int k = 0; k < 6; k++)
+            {
+                total += hearts.get(k).getScore();
+            }
+            */
+            getBall().setBricksBroken(getBall().getBricksBroken()+1);//total);
+        } 
     }
 
     private void addCherry()
@@ -90,6 +130,27 @@ public class MyWorld extends World
         {
             Cherry cherry = new Cherry();
             addObject(cherry,(int)(Math.random()*getWidth()), 0);
+            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+        }
+    }
+
+    private void addCar()
+    {
+        if(getBall().getBricksBroken()== 30) 
+        {
+            Car car = new Car();
+            addObject(car,54, 296);
+            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+
+        }
+    }
+
+    private void addRocket()
+    {
+        if(getBall().getBricksBroken()== 20) 
+        {
+            Rocket rocket = new Rocket();
+            addObject(rocket,46, 922);
             getBall().setBricksBroken(getBall().getBricksBroken()+1);
 
         }
@@ -172,37 +233,36 @@ public class MyWorld extends World
         addObject(bricks35,506,36);
         addObject(bricks36,539,36);
 
-        ball.add(new ballNormal());
-        addObject(ball.get(0), 298, 253);
+        ball = new ballNormal();
+        addObject(ball, 298, 253);
 
         Score score = new Score();
         addObject(score, 51, 10);
 
+        // setBackground("background1.png");
     }
 
     public Ball getBall()
     {
-        return ball.get(0);
+        return ball;
     }
 
     public void setSmallBall()
     {
-        int  x= ball.get(0).getX();
-        int  y=ball.get(0).getY();
-        removeObject(ball.get(0));
-        ball.remove(0);
-        ball.add(new ballSmall());
-        addObject(ball.get(0), x,y);
+        int  x= ball.getX();
+        int  y=ball.getY();
+        removeObject(ball);
+        ball = new ballSmall();
+        addObject(ball, x,y);
     }
 
     public void setBigBall()
     {
-        int  x= ball.get(0).getX();
-        int  y=ball.get(0).getY();
-        removeObject(ball.get(0));
-        ball.remove(0);
-        ball.add(new ballBig());
-        addObject(ball.get(0), x,y);
+        int  x= ball.getX();
+        int  y=ball.getY();
+        removeObject(ball);
+        ball = new ballBig();
+        addObject(ball, x,y);
     }
 
     public Paddle getPaddle()

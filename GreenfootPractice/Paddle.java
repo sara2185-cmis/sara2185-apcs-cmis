@@ -25,11 +25,9 @@ public class Paddle extends Actor implements Change
         {
             if(isTouching(Cactus.class))
             {
-
                 int   x= this.getX();
                 int  y=this.getY();
                 world.removeObject(this);
-
                 world.addObject(new PaddleBig(), x, y);
             }
 
@@ -43,11 +41,9 @@ public class Paddle extends Actor implements Change
         {
             if(isTouching(Flower.class))
             {
-
                 int   x= this.getX();
                 int  y=this.getY();
                 world.removeObject(this);
-
                 world.addObject(new PaddleSmall(), x, y);
             }
 

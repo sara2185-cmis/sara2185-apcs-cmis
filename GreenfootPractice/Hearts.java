@@ -1,33 +1,46 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Bomb extends Drop implements Timed, Disappear
+public class Hearts extends Drop
 {
+    private Ball ball;
     private Paddle paddle;
+   
+
+    private int score = 0;
+
     public void act() 
     {
         super.act();
-        die();
         disappear();
-    }    
+        increaseScore();
+    }  
 
     public void move()
     {
-        move(2);
+        move(3);
     }
 
-    public void die()
+    public void increaseScore()
     {
         MyWorld world = (MyWorld)getWorld();
+
         if(world != null)
         {
+
+            ball = world.getBall();
             paddle = world.getPaddle();
+            score = ball.getBricksBroken();
             if(intersects(paddle))
             {
-                GameOver gameover= new GameOver();
-                world.addObject(gameover, world.getWidth()/2, world.getHeight()/2);
-                Greenfoot.stop();
+                score++;
+
             }
         }
+    }
+    
+    public int getScore()
+    {
+        return score;
     }
 
     public void disappear()
@@ -38,10 +51,6 @@ public class Bomb extends Drop implements Timed, Disappear
         {
             world.removeObject(this);
         }
-
     }
 
-    public void timed()
-    {
-    }
 }
