@@ -4,15 +4,14 @@ public class Hearts extends Drop
 {
     private Ball ball;
     private Paddle paddle;
-   
 
-    private int score = 0;
-
+    
     public void act() 
     {
         super.act();
-        disappear();
         increaseScore();
+        disappear();
+        
     }  
 
     public void move()
@@ -29,19 +28,13 @@ public class Hearts extends Drop
 
             ball = world.getBall();
             paddle = world.getPaddle();
-            score = ball.getBricksBroken();
             if(intersects(paddle))
             {
-                score++;
-
+                world.setCounter(3);
             }
         }
     }
-    
-    public int getScore()
-    {
-        return score;
-    }
+
 
     public void disappear()
     {

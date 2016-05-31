@@ -1,7 +1,7 @@
 import greenfoot.*; 
 public abstract class Enemy extends Actor
 {
-    private int direction = 3;
+    private int direction = (int)(Math.random() * 7);
     private Ball ball;
     public void act() 
     {

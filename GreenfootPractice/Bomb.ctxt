@@ -8,6 +8,4 @@ comment3.params=
 comment3.target=void\ die()
 comment4.params=
 comment4.target=void\ disappear()
-comment5.params=
-comment5.target=void\ timed()
-numComments=6
+numComments=5

@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Pumpkin extends Drop
+public class Pumpkin extends Drop implements Disappear
 {
     Ball ball;
     public void act() 

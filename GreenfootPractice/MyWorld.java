@@ -4,6 +4,7 @@ public class MyWorld extends World
 {
     private Paddle paddle;
     private Ball ball= new Ball();
+    private int counter = 0;
     public MyWorld()
     {    
         super(600, 400, 1); 
@@ -29,7 +30,7 @@ public class MyWorld extends World
         if(getBall().getBricksBroken() == 12)
         {
             addObject(flower,(int)(Math.random()*getWidth()), 0);
-            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+            getBall().setBricksBroken(1);
         } 
     }
 
@@ -39,7 +40,7 @@ public class MyWorld extends World
         if(getBall().getBricksBroken() == 7)
         {
             addObject(pumpkin,(int)(Math.random()*getWidth()), 0);
-            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+            getBall().setBricksBroken(1);
         } 
     }
 
@@ -49,7 +50,7 @@ public class MyWorld extends World
         if(getBall().getBricksBroken() == 17)
         {
             addObject(grapes,(int)(Math.random()*getWidth()), 0);
-            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+            getBall().setBricksBroken(1);
         } 
     }
 
@@ -59,7 +60,7 @@ public class MyWorld extends World
         if(getBall().getBricksBroken() == 21)
         {
             addObject(cactus,(int)(Math.random()*getWidth()), 0);
-            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+            getBall().setBricksBroken(1);
         } 
     }
 
@@ -83,7 +84,7 @@ public class MyWorld extends World
             {
                 addObject(bombs.get(i),(int)(Math.random()*getWidth()), 0);
             }
-            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+            getBall().setBricksBroken(1);
 
         }
     }
@@ -105,7 +106,7 @@ public class MyWorld extends World
         hearts.add(heart5);
         hearts.add(heart6);
 
-        if(getBall().getBricksBroken() == 8)
+        if(getBall().getBricksBroken()%3==0)
         {
             int i = 0;
             int total = 0;
@@ -114,13 +115,8 @@ public class MyWorld extends World
                 addObject(hearts.get(i),(int)(Math.random()*getWidth()), 0);
                 i++;
             }
-            
-            /*for(int k = 0; k < 6; k++)
-            {
-                total += hearts.get(k).getScore();
-            }
-            */
-            getBall().setBricksBroken(getBall().getBricksBroken()+1);//total);
+
+            getBall().setBricksBroken(1);
         } 
     }
 
@@ -130,7 +126,7 @@ public class MyWorld extends World
         {
             Cherry cherry = new Cherry();
             addObject(cherry,(int)(Math.random()*getWidth()), 0);
-            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+            getBall().setBricksBroken(1);
         }
     }
 
@@ -140,7 +136,7 @@ public class MyWorld extends World
         {
             Car car = new Car();
             addObject(car,54, 296);
-            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+            getBall().setBricksBroken(1);
 
         }
     }
@@ -150,8 +146,8 @@ public class MyWorld extends World
         if(getBall().getBricksBroken()== 20) 
         {
             Rocket rocket = new Rocket();
-            addObject(rocket,46, 922);
-            getBall().setBricksBroken(getBall().getBricksBroken()+1);
+            addObject(rocket,43, 109);
+            getBall().setBricksBroken(1);
 
         }
     }
@@ -245,6 +241,16 @@ public class MyWorld extends World
     public Ball getBall()
     {
         return ball;
+    }
+
+    public int getCounter()
+    {
+        return counter;
+    }
+
+    public void setCounter(int counter)
+    {
+        this.counter += counter;
     }
 
     public void setSmallBall()

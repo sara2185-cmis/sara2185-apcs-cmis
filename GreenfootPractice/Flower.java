@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Flower extends Drop implements Timed
+public class Flower extends Drop implements Disappear
 {
     private Paddle paddle;
     public void act() 
@@ -40,8 +40,5 @@ public class Flower extends Drop implements Timed
         
     }
 
-    public void timed()
-    {
-    }
-
+    
 }

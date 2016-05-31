@@ -3,7 +3,7 @@ import java.awt.Color;
 public class Ball extends Actor implements Change
 {
 
-    private int bricksBroken = 0;
+    private int bricksBroken = 1;
     private int speed = 4;
     private Actor brick;
     private int time = 30;
@@ -41,7 +41,7 @@ public class Ball extends Actor implements Change
 
     public void setBricksBroken(int bricks)
     {
-        this.bricksBroken = bricks;
+        this.bricksBroken += bricks;
     }
 
     public void moveAndDeflect()
@@ -73,6 +73,7 @@ public class Ball extends Actor implements Change
             world.removeObject(brick);
             turn(120);
             bricksBroken++;
+            world.setCounter(1);
         }
     }
 

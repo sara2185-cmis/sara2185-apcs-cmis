@@ -24,13 +24,9 @@ public class Cactus extends Drop implements Disappear
         {
             world.removeObject(this);
         }
-        
-        // if(getY() >= world.getHeight() -5||intersects(paddle))//if hits the bottom, cherry disappears
-        // {
-        //     world.removeObject(this);
-        // }
+       
     }
-/*
+
      public void decreasePaddleLength()
     {
         MyWorld world = (MyWorld)getWorld();
@@ -46,8 +42,6 @@ public class Cactus extends Drop implements Disappear
             } 
         }
     }
-    /*
-     * 
-     */
+    
 
 }
