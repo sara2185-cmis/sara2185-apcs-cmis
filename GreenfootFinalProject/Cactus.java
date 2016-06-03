@@ -28,18 +28,16 @@ public class Cactus extends Drop implements Disappear
        
     }
 
-     public void increasePaddleLength()
+    public void increasePaddleLength()
     {
         MyWorld world = (MyWorld)getWorld();
         if(world != null)
         {
             if(isTouching(Paddle.class))
             {
-
                 paddle = world.getPaddle();
                 getWorld().removeObject(paddle);
-                getWorld().addObject(new PaddleBig(), this.getX(), this.getY());
-
+                getWorld().addObject(new PaddleBig(), this.getX(), this.getY()+28);
             } 
         }
     }

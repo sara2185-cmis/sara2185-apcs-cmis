@@ -76,7 +76,6 @@ public class Ball extends Actor implements Change
         }
     }
 
-  
     public void changeBig()
     {
         MyWorld world = (MyWorld)getWorld();

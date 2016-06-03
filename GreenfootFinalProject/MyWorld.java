@@ -28,7 +28,7 @@ public class MyWorld extends World
     private void addFlower()
     {
         Flower flower = new Flower();
-        if(getBall().getBricksBroken() == 12)
+        if(getBall().getBricksBroken() == 5)
         {
             addObject(flower,(int)(Math.random()*getWidth()), 0);
             getBall().setBricksBroken(1);
@@ -79,7 +79,7 @@ public class MyWorld extends World
         bombs.add(bomb3);
         bombs.add(bomb4);
 
-        if(getBall().getBricksBroken() %15== 0)
+        if(getBall().getBricksBroken()%15 == 0)
         {
             for(int i = 0; i < 4; i ++)
             {
@@ -123,7 +123,7 @@ public class MyWorld extends World
 
     private void addCherry()
     {
-        if(getBall().getBricksBroken()== 5) 
+        if(getBall().getBricksBroken()== 12) 
         {
             Cherry cherry = new Cherry();
             addObject(cherry,(int)(Math.random()*getWidth()), 0);
@@ -231,7 +231,7 @@ public class MyWorld extends World
         addObject(bricks36,539,36);
 
         ball = new ballNormal();
-        addObject(ball, 298, 253);
+        addObject(ball, 300, 280);
 
         Score score = new Score();
         addObject(score, 51, 10);
